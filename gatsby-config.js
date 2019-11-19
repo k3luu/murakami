@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Jenny and Tyler`,
+    title: `Tyler & Jenny`,
     description: `Save the date!`,
     author: `@kathyluu`,
   },
@@ -18,7 +18,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `murakami-wedding`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
@@ -29,6 +29,7 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-emotion`
   ],
 }
