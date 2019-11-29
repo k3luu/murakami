@@ -614,3 +614,7 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+@-ms-viewport {
+  width: device-width;
+}
