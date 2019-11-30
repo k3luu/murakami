@@ -19,7 +19,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `murakami-wedding`,
-        short_name: `starter`,
+        short_name: `j&t`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
