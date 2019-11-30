@@ -1,5 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "@emotion/styled"
+import { withStyles } from "@material-ui/core/styles"
+import Radio from "@material-ui/core/Radio"
+import RadioGroup from "@material-ui/core/RadioGroup"
+import FormControlLabel from "@material-ui/core/FormControlLabel"
+import Button from "@material-ui/core/Button"
 
 import TextInput from "./TextInput"
 import { InputLabel } from "./inputStyles"
@@ -27,7 +32,30 @@ const HiddenSection = styled.div`
   }
 `
 
+const styles = () => ({
+  label: {
+    color: "#000",
+    fontFamily: "Raleway",
+    fontSize: 14,
+    lineHeight: 1.1,
+    width: 50,
+  },
+  group: {
+    display: "flex",
+    flexDirection: "row",
+  },
+})
+
 const RsvpForm = props => {
+  const [guestAdded, setGuestAdded] = useState(false)
+  const { classes } = props
+
+  function handleChange(event) {
+    setGuestAdded(event.target.value)
+  }
+
+  console.log(guestAdded)
+
   return (
     <form>
       <FormSection>
@@ -53,13 +81,28 @@ const RsvpForm = props => {
         <InputLabel style={{ margin: "15px 50px 15px 0" }}>
           Plus One?
         </InputLabel>
-        <input type="radio" name="guestAdded" value="Yes" />{" "}
-        <InputLabel>Yes</InputLabel>
-        <input type="radio" name="guestAdded" value="No" />{" "}
-        <InputLabel>No</InputLabel>
+        <RadioGroup
+          aria-label="guest-added"
+          name="guestAdded"
+          className={classes.group}
+          onChange={handleChange}
+        >
+          <FormControlLabel
+            value="Yes"
+            control={<Radio color="primary" />}
+            label="Yes"
+            classes={{ label: classes.label }}
+          />
+          <FormControlLabel
+            value="No"
+            control={<Radio color="primary" />}
+            label="No"
+            classes={{ label: classes.label }}
+          />
+        </RadioGroup>
       </FormSection>
 
-      <HiddenSection>
+      <HiddenSection className={guestAdded === "Yes" ? "active" : ""}>
         <TextInput
           label="Guest Name"
           id="guest_name"
@@ -67,8 +110,10 @@ const RsvpForm = props => {
           placeholder="Guest Name"
         />
       </HiddenSection>
+
+      <Button variant="outlined">Submit</Button>
     </form>
   )
 }
 
-export default RsvpForm
+export default withStyles(styles)(RsvpForm)
