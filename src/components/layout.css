@@ -195,7 +195,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: "Raleway";
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -226,10 +226,11 @@ h1 {
   margin-bottom: 1.45rem;
   color: inherit;
   font-family: "Raleway";
-  font-weight: bold;
+  font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;
+  letter-spacing: 1.8px;
 }
 h2 {
   margin-left: 0;
@@ -379,6 +380,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  letter-spacing: 0.6px;
 }
 figure {
   margin-left: 0;

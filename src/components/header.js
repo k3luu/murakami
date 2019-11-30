@@ -6,6 +6,7 @@ import styled from "@emotion/styled"
 const HeaderContainer = styled.header`
   font-family: "Raleway";
   position: absolute;
+  top: 0;
   z-index: 1;
   background-color: #fff;
   width: 100%;
@@ -14,7 +15,6 @@ const HeaderContainer = styled.header`
 
   a {
     text-decoration: none;
-    color: #000;
   }
 `
 
@@ -25,6 +25,7 @@ const SiteName = styled.div`
   margin: 10px auto;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 2px;
 
   a {
     color: #000;
@@ -35,11 +36,19 @@ const SiteName = styled.div`
 const Navigation = styled.nav`
   font-size: 14px;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
 
   a {
     padding: 5px;
-    margin: 0 10px;
+    margin: 0 20px;
+    border-bottom: 2px solid transparent;
+    color: #000;
+    letter-spacing: 1px;
+    transition: 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+
+    &:hover {
+      border-color: #000;
+    }
   }
 `
 

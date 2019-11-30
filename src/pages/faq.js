@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 const FaqPage = () => (
   <Layout>
     <SEO title="Frequently Asked Questions" />
+    <h1>Frequently Asked Questions</h1>
   </Layout>
 )
 

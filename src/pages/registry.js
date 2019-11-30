@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 const ProposalPage = () => (
   <Layout>
     <SEO title="Registry" />
+    <h1>Registry</h1>
   </Layout>
 )
 

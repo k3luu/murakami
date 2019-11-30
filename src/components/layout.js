@@ -10,9 +10,17 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import "typeface-sacramento"
 import "typeface-raleway"
+import styled from "@emotion/styled"
 
 import Header from "./header"
 import "./layout.css"
+
+const Main = styled.main`
+  &:not(.home) {
+    max-width: 1000px;
+    margin: 150px auto;
+  }
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,10 +33,18 @@ const Layout = ({ children }) => {
     }
   `)
 
+  function handleClassName() {
+    if (window.location.pathname === "/") {
+      return "home"
+    }
+
+    return ""
+  }
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main>{children}</main>
+      <Main className={handleClassName()}>{children}</Main>
     </>
   )
 }
