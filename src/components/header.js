@@ -53,27 +53,46 @@ const Navigation = styled.nav`
   }
 `
 
-const Header = ({ siteTitle }) => (
-  <HeaderContainer>
-    <SiteName>
-      <Link
-        to="/"
-        style={{
-          textDecoration: `none`,
-        }}
-      >
-        {siteTitle}
-      </Link>
-    </SiteName>
-    <Navigation>
-      <Link to="/how-he-asked">How He Asked</Link>
-      <Link to="/photos">Photos</Link>
-      <Link to="/registry">Registry</Link>
-      <Link to="/faq">FAQ</Link>
-      <Link to="/rsvp">RSVP</Link>
-    </Navigation>
-  </HeaderContainer>
-)
+const Header = ({ siteTitle }) => {
+  function handleActiveTab(path) {
+    const pathName =
+      typeof window !== `undefined` ? window.location.pathname : ""
+
+    return pathName === path ? "active" : ""
+  }
+
+  return (
+    <HeaderContainer>
+      <SiteName>
+        <Link
+          to="/"
+          style={{
+            textDecoration: `none`,
+          }}
+        >
+          {siteTitle}
+        </Link>
+      </SiteName>
+      <Navigation>
+        <Link to="/how-he-asked" className={handleActiveTab("/how-he-asked")}>
+          How He Asked
+        </Link>
+        <Link to="/photos" className={handleActiveTab("/photos")}>
+          Photos
+        </Link>
+        <Link to="/registry" className={handleActiveTab("/registry")}>
+          Registry
+        </Link>
+        <Link to="/faq" className={handleActiveTab("/faq")}>
+          FAQ
+        </Link>
+        <Link to="/rsvp" className={handleActiveTab("/rsvp")}>
+          RSVP
+        </Link>
+      </Navigation>
+    </HeaderContainer>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
