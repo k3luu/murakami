@@ -7,7 +7,8 @@ import SEO from "../components/seo"
 const ProposalPage = () => (
   <Layout>
     <SEO title="The Proposal" />
-    <h1>The Proposal</h1>
+    <h1>How He Asked</h1>
+    <p>On a mountain.</p>
   </Layout>
 )
 

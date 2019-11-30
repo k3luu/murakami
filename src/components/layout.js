@@ -34,8 +34,16 @@ const Layout = ({ children }) => {
   `)
 
   function handleClassName() {
-    if (window && window.location.pathname === "/") {
+    if (typeof window !== `undefined` && window.location.pathname === "/") {
       return "home"
+    }
+
+    return ""
+  }
+
+  function returnPathname() {
+    if (typeof window !== `undefined`) {
+      return window.location.pathname
     }
 
     return ""
@@ -43,7 +51,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header
+        siteTitle={data.site.siteMetadata.title}
+        pathname={returnPathname()}
+      />
       <Main className={handleClassName()}>{children}</Main>
     </>
   )

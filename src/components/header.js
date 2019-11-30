@@ -46,7 +46,8 @@ const Navigation = styled.nav`
     letter-spacing: 1px;
     transition: 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
 
-    &:hover {
+    &:hover,
+    &.active {
       border-color: #000;
     }
   }
@@ -65,7 +66,7 @@ const Header = ({ siteTitle }) => (
       </Link>
     </SiteName>
     <Navigation>
-      <Link to="/the-proposal">How He Asked</Link>
+      <Link to="/how-he-asked">How He Asked</Link>
       <Link to="/photos">Photos</Link>
       <Link to="/registry">Registry</Link>
       <Link to="/faq">FAQ</Link>
