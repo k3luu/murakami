@@ -5,7 +5,6 @@ import styled from "@emotion/styled"
 import Drawer from "@material-ui/core/Drawer"
 import IconButton from "@material-ui/core/IconButton"
 import MenuIcon from "@material-ui/icons/Menu"
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft"
 import ChevronRightIcon from "@material-ui/icons/ChevronRight"
 
 const HeaderContainer = styled.header`
@@ -15,8 +14,7 @@ const HeaderContainer = styled.header`
   z-index: 1;
   background-color: #fff;
   width: 100%;
-  border-bottom: 2px solid #eee;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  box-shadow: #74a3b77a 1px 1px 8px -3px;
 
   a {
     text-decoration: none;
@@ -39,9 +37,10 @@ const SiteName = styled.div`
 `
 
 const Navigation = styled.nav`
-  font-size: 14px;
+  font-size: 10px;
+  font-weight: bold;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
 
   @media (max-width: 1023px) {
     display: none;
@@ -49,15 +48,15 @@ const Navigation = styled.nav`
 
   a {
     padding: 5px;
-    margin: 0 20px;
+    margin: 0 15px;
     border-bottom: 2px solid transparent;
-    color: #000;
+    color: #6b7d83;
     letter-spacing: 1px;
     transition: 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
 
     &:hover,
     &.active {
-      border-color: #000;
+      border-color: #74a3b7;
     }
   }
 `

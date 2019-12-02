@@ -11,47 +11,34 @@ const HeroImageContainer = styled.div`
   height: 100vh;
   position: relative;
   padding: 0;
-`
-
-const HeroContent = styled.div`
-  position: absolute;
-  top: 40%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  text-align: center;
-
   color: #fff;
-  font-size: 2.4rem;
-`
-
-const Container = styled.div`
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 3px 2px 7px #000;
 `
 
 const Names = styled.div`
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
   font-size: 50px;
   font-weight: 300;
   padding: 50px 0;
-  border-bottom: 2px solid #eee;
   margin: 0 auto;
-  text-transform: uppercase;
-  letter-spacing: 3px;
 
   div {
-    width: 500px;
     padding: 5px 0;
   }
 `
 
 const Date = styled.div`
+  position: absolute;
+  bottom: 50px;
+  right: 20px;
   font-size: 50px;
   font-weight: 300;
-  padding: 50px 0;
   margin: 0 auto;
-  border-bottom: 2px solid #eee;
   text-align: right;
 
   div.date {
@@ -71,20 +58,16 @@ const IndexPage = () => (
     <SEO title="Home" />
     <HeroImageContainer>
       <Image />
-      <HeroContent />
-    </HeroImageContainer>
-    <Container>
-      <Names>
+      {/* <Names>
         <div>Tyler Murakami</div>
         <div>&</div>
         <div>Jenny Luu</div>
-      </Names>
+      </Names> */}
       <Date>
-        <div className="location">#JennyTyesTheKnot</div>
         <div className="date">September 19, 2020</div>
         <div className="location">Sonoma County, California</div>
       </Date>
-    </Container>
+    </HeroImageContainer>
   </Layout>
 )
 
