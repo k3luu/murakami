@@ -8,27 +8,28 @@ import SEO from "../components/seo"
 const DateTitle = styled.div`
   display: flex;
   align-items: center;
+  height: 80px;
 `;
 
 const Date = styled.div`
   border-radius: 100px;
   border: 1px solid #000;
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
   text-align: center;
 `;
 
 const Weekday = styled.h6`
   font-family: "Sacramento";
-  font-size: 24px;
-  margin-left: 20px;
-  margin-bottom: 0;
+  font-size: 28px;
+  letter-spacing: 1.2px;
+  margin: 0 20px;
 `;
 
 const Note = styled.div`
-  margin-left: 20px;
   font-size: 12px;
+  margin: 10px 0;
 `;
 
 const Day = styled.div`
@@ -63,10 +64,23 @@ const SchedulePage = () => (
       <Weekday>Friday</Weekday>
     </DateTitle>
     <Day>
-      <Event>3:30 - 5 Wine Tasting [Wedding Party only]</Event>
-      <Event>5 - 6 Wedding Rehearsal [Wedding Party only]</Event>
-      <Event>6 - 8 Rehearsal Dinner [Wedding Party only]</Event>
-      <Event>8 - 10 Cocktail Reception [Everyone invited] - We'll be hosting a cocktail reception for guests who are arriving in Sonoma early. This is an optional event so don't feel obliged but we're happy to have you join in. Please RSVP <Link to="/rsvp">here</Link>.</Event>
+      <Event>
+        <div>Wine Tasting [Wedding Party only]</div>
+        <div>3:30 - 5</div>
+      </Event>
+      <Event>
+        <div>Wedding Rehearsal [Wedding Party only]</div>
+        <div>5 - 6</div>
+      </Event>
+      <Event>
+        <div>Rehearsal Dinner [Wedding Party only]</div>
+        <div>6 - 8</div>
+      </Event>
+      <Event>
+        <div>Cocktail Reception [Everyone invited]</div>
+        <div>8 - 10</div>
+        <Note>We'll be hosting a cocktail reception for guests who are arriving in Sonoma early. This is an optional event so don't feel obliged but we're happy to have you join in. Please RSVP <Link to="/rsvp">here</Link>.</Note>
+      </Event>
     </Day>
 
     <DateTitle>
@@ -75,11 +89,25 @@ const SchedulePage = () => (
       <Note>The wedding ceremony will begin at 5pm at Sonoma Winery located at 25200 Arnold Dr, Sonoma, CA 95476. Reception to follow.</Note>
     </DateTitle>
     <Day>
-      <Event>5:00 Guests arrive</Event>
-      <Event>5:30 Ceremony begins</Event>
-      <Event>6:00-7:30 Cocktail hour</Event>
-      <Event>7:30 - 11:00 Dinner</Event>
-      <Event>9:00 - 11 Dancing</Event>
+      <Event>
+        <div>Guests arrive</div>
+        <div>5:00</div>
+      </Event>
+      <Event>
+        <div>Ceremony begins</div>
+        <div>5:30</div>
+      </Event>
+      <Event>
+        <div>Cocktail hour</div>
+        <div>6:00-7:30</div>
+      </Event>
+      <Event>
+        <div>Dinner</div>
+        <div>7:30 - 11:00</div></Event>
+      <Event>
+        <div>Dancing</div>
+        <div>9:00 - 11</div>
+      </Event>
     </Day>
 
     <DateTitle>
