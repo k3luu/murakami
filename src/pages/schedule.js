@@ -9,27 +9,47 @@ const DateTitle = styled.div`
   display: flex;
   align-items: center;
   height: 80px;
+
+  @media (max-width: 1023px) {
+    height: auto;
+    align-items: baseline;
+    margin-top: 20px;
+  }
 `;
 
 const Date = styled.div`
   border-radius: 100px;
   border: 1px solid #000;
   height: 50px;
+  min-height: 50px;
   width: 50px;
+  min-width: 50px;
   line-height: 50px;
   text-align: center;
+`;
+
+const DateSubtitle = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  
+  @media (max-width: 1023px) {
+    display: block;
+  }
 `;
 
 const Weekday = styled.h6`
   font-family: "Sacramento";
   font-size: 28px;
   letter-spacing: 1.2px;
-  margin: 0 20px;
+  margin-bottom: 0;
+  margin-right: 20px;
 `;
 
 const Note = styled.div`
   font-size: 12px;
-  margin: 10px 0;
+  margin: 10px 20px 10px 0;
+  max-width: 500px;
 `;
 
 const Day = styled.div`
@@ -39,7 +59,7 @@ const Day = styled.div`
 `;
 
 const Event = styled.div`
-  padding: 20px 30px;
+  padding: 20px 50px;
 
   &::before {
     content: ' ';
@@ -61,7 +81,9 @@ const SchedulePage = () => (
 
     <DateTitle>
       <Date>18</Date>
-      <Weekday>Friday</Weekday>
+      <DateSubtitle>
+        <Weekday>Friday</Weekday>
+      </DateSubtitle>
     </DateTitle>
     <Day>
       <Event>
@@ -85,8 +107,10 @@ const SchedulePage = () => (
 
     <DateTitle>
       <Date>19</Date>
-      <Weekday>Saturday</Weekday>
-      <Note>The wedding ceremony will begin at 5pm at Sonoma Winery located at 25200 Arnold Dr, Sonoma, CA 95476. Reception to follow.</Note>
+      <DateSubtitle>
+        <Weekday>Saturday</Weekday>
+        <Note>The wedding ceremony will begin at 5pm at Sonoma Winery located at 25200 Arnold Dr, Sonoma, CA 95476. Reception to follow.</Note>
+      </DateSubtitle>
     </DateTitle>
     <Day>
       <Event>
@@ -99,7 +123,7 @@ const SchedulePage = () => (
       </Event>
       <Event>
         <div>Cocktail hour</div>
-        <div>6:00-7:30</div>
+        <div>6:00 - 7:30</div>
       </Event>
       <Event>
         <div>Dinner</div>
@@ -112,8 +136,10 @@ const SchedulePage = () => (
 
     <DateTitle>
       <Date>20</Date>
-      <Weekday>Sunday</Weekday>
-      <Note>There will be no hosted events on Sunday. We will leave it to you to make the most of the weekend in Sonoma. Check out our recommendations on the <Link to="/travel">Travel page</Link>.</Note>
+      <DateSubtitle>
+        <Weekday>Sunday</Weekday>
+        <Note>There will be no hosted events on Sunday. We will leave it to you to make the most of the weekend in Sonoma. Check out our recommendations on the <Link to="/travel">Travel page</Link>.</Note>
+      </DateSubtitle>
     </DateTitle>
   </Layout>
 )
