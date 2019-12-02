@@ -188,12 +188,12 @@ const Header = ({ siteTitle }) => {
         <Link to="/faq" className={handleActiveTab("/faq")}>
           FAQ
         </Link>
-        <Link to="/wedding-party" className={handleActiveTab("/wedding-party")}>
+        {/* <Link to="/wedding-party" className={handleActiveTab("/wedding-party")}>
           Wedding Party
         </Link>
         <Link to="/registry" className={handleActiveTab("/registry")}>
           Registry
-        </Link>
+        </Link> */}
         <Link to="/rsvp" className={handleActiveTab("/rsvp")}>
           RSVP
         </Link>
@@ -243,7 +243,7 @@ const Header = ({ siteTitle }) => {
             <Link to="/faq" className={handleActiveTab("/faq")}>
               FAQ
           </Link>
-            <Link
+            {/* <Link
               to="/wedding-party"
               className={handleActiveTab("/wedding-party")}
             >
@@ -251,7 +251,7 @@ const Header = ({ siteTitle }) => {
           </Link>
             <Link to="/registry" className={handleActiveTab("/registry")}>
               Registry
-          </Link>
+          </Link> */}
             <Link to="/rsvp" className={handleActiveTab("/rsvp")}>
               RSVP
           </Link>
