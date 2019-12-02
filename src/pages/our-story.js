@@ -39,7 +39,7 @@ const ProposalPage = () => {
       <Container>
         <div>
           <emotionStyles.Section>
-            <emotionStyles.Title>How We Met</emotionStyles.Title>
+            <h1>How We Met</h1>
             <emotionStyles.Text>
               Where all amazing love stories begin. At work! Though we never
               worked on any projects together. We met through mutual friends and
@@ -52,11 +52,11 @@ const ProposalPage = () => {
             </emotionStyles.Text>
           </emotionStyles.Section>
           <emotionStyles.Section>
-            <emotionStyles.Title>How He Asked</emotionStyles.Title>
+            <h1>How He Asked</h1>
             <emotionStyles.Text>On a mountain.</emotionStyles.Text>
           </emotionStyles.Section>
           <emotionStyles.Section>
-            <emotionStyles.Title>Fun Facts</emotionStyles.Title>
+            <h1>Fun Facts</h1>
             <emotionStyles.Text>
               - Our first date was at the California Academy of Sciences. This
               is exactly how the conversation went:

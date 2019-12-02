@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
   `)
 
   function handleClassName() {
-    if (typeof window !== `undefined` && window.location.pathname === "/") {
+    if (typeof window === 'object' && window.location.pathname === "/") {
       return "home"
     }
 

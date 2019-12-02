@@ -41,6 +41,10 @@ const Date = styled.div`
   margin: 0 auto;
   text-align: right;
 
+  @media (max-width: 1024px) {
+    font-size: 26px;
+  }
+
   div.date {
     padding: 10px 0;
     text-transform: uppercase;
@@ -50,6 +54,10 @@ const Date = styled.div`
   div.location {
     font-size: 20px;
     font-weight: 400;
+
+    @media (max-width: 1024px) {
+      font-size: 16px;
+    }
   }
 `
 
