@@ -8,6 +8,7 @@
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
     "@material-ui/core": "^4.7.0",
+    "@material-ui/icons": "^4.5.1",
     "gatsby": "^2.17.11",
     "gatsby-image": "^2.2.31",
     "gatsby-plugin-emotion": "^4.1.15",
@@ -21,6 +22,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
+    "react-masonry-component": "^6.2.1",
     "typeface-raleway": "0.0.75",
     "typeface-sacramento": "0.0.72"
   },

@@ -1,7 +1,12 @@
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
 import styled from "@emotion/styled"
+import Drawer from "@material-ui/core/Drawer"
+import IconButton from "@material-ui/core/IconButton"
+import MenuIcon from "@material-ui/icons/Menu"
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft"
+import ChevronRightIcon from "@material-ui/icons/ChevronRight"
 
 const HeaderContainer = styled.header`
   font-family: "Raleway";
@@ -38,6 +43,10 @@ const Navigation = styled.nav`
   text-align: center;
   padding: 20px;
 
+  @media (max-width: 1023px) {
+    display: none;
+  }
+
   a {
     padding: 5px;
     margin: 0 20px;
@@ -53,12 +62,32 @@ const Navigation = styled.nav`
   }
 `
 
+const MobileMenu = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+`
+
 const Header = ({ siteTitle }) => {
+  const [drawerOpen, setDrawer] = useState(false)
+
   function handleActiveTab(path) {
     const pathName =
       typeof window !== `undefined` ? window.location.pathname : ""
 
     return pathName === path ? "active" : ""
+  }
+
+  function showDrawer() {
+    setDrawer(true)
+  }
+
+  function hideDrawer() {
+    setDrawer(false)
   }
 
   return (
@@ -74,22 +103,78 @@ const Header = ({ siteTitle }) => {
         </Link>
       </SiteName>
       <Navigation>
-        <Link to="/how-he-asked" className={handleActiveTab("/how-he-asked")}>
-          How He Asked
+        <Link to="/" className={handleActiveTab("/")}>
+          Home
         </Link>
-        <Link to="/photos" className={handleActiveTab("/photos")}>
-          Photos
+        <Link to="/our-story" className={handleActiveTab("/our-story")}>
+          Our Story
         </Link>
-        <Link to="/registry" className={handleActiveTab("/registry")}>
-          Registry
+        <Link to="/schedule" className={handleActiveTab("/schedule")}>
+          Schedule
+        </Link>
+        <Link to="/travel" className={handleActiveTab("/travel")}>
+          Travel
         </Link>
         <Link to="/faq" className={handleActiveTab("/faq")}>
           FAQ
         </Link>
+        <Link to="/wedding-party" className={handleActiveTab("/wedding-party")}>
+          Wedding Party
+        </Link>
+        <Link to="/registry" className={handleActiveTab("/registry")}>
+          Registry
+        </Link>
         <Link to="/rsvp" className={handleActiveTab("/rsvp")}>
           RSVP
         </Link>
+        <Link to="/photos" className={handleActiveTab("/photos")}>
+          Photos
+        </Link>
       </Navigation>
+
+      <MobileMenu>
+        <IconButton
+          color="inherit"
+          aria-label="open drawer"
+          onClick={showDrawer}
+          edge="start"
+        >
+          <MenuIcon />
+        </IconButton>
+
+        <Drawer anchor="right" open={drawerOpen} onClose={hideDrawer}>
+          <Link to="/" className={handleActiveTab("/")}>
+            Home
+          </Link>
+          <Link to="/our-story" className={handleActiveTab("/our-story")}>
+            Our Story
+          </Link>
+          <Link to="/schedule" className={handleActiveTab("/schedule")}>
+            Schedule
+          </Link>
+          <Link to="/travel" className={handleActiveTab("/travel")}>
+            Travel
+          </Link>
+          <Link to="/faq" className={handleActiveTab("/faq")}>
+            FAQ
+          </Link>
+          <Link
+            to="/wedding-party"
+            className={handleActiveTab("/wedding-party")}
+          >
+            Wedding Party
+          </Link>
+          <Link to="/registry" className={handleActiveTab("/registry")}>
+            Registry
+          </Link>
+          <Link to="/rsvp" className={handleActiveTab("/rsvp")}>
+            RSVP
+          </Link>
+          <Link to="/photos" className={handleActiveTab("/photos")}>
+            Photos
+          </Link>
+        </Drawer>
+      </MobileMenu>
     </HeaderContainer>
   )
 }

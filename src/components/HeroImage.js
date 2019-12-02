@@ -26,6 +26,8 @@ const Image = () => {
     }
   `)
 
+  console.log(data)
+
   return (
     <Img
       style={{ height: "100%" }}

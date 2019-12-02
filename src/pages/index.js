@@ -25,15 +25,6 @@ const HeroContent = styled.div`
   font-size: 2.4rem;
 `
 
-const HeroDetail = styled.div`
-  font-family: "Sacramento";
-  margin: 20px 0;
-`
-
-const HeroDate = styled.div`
-  font-size: 14px;
-`
-
 const Container = styled.div`
   width: 100%;
   max-width: 1000px;
@@ -75,35 +66,12 @@ const Date = styled.div`
   }
 `
 
-const Section = styled.div`
-  padding: 50px 0;
-`
-
-const Title = styled.div`
-  font-size: 30px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-`
-
-const Subtitle = styled.div`
-  font-weight: 500;
-  padding: 30px 0;
-`
-
-const Text = styled.p`
-  // padding-top: 30px;
-`
-
 const IndexPage = () => (
   <Layout>
-    <SEO title="Save the date!" />
+    <SEO title="Home" />
     <HeroImageContainer>
       <Image />
-      <HeroContent>
-        {/* <HeroDetail>Save the Date</HeroDetail>
-        <HeroDetail>09.19.2020</HeroDetail>
-        <HeroDate>More details to come!</HeroDate> */}
-      </HeroContent>
+      <HeroContent />
     </HeroImageContainer>
     <Container>
       <Names>
@@ -116,11 +84,6 @@ const IndexPage = () => (
         <div className="date">September 19, 2020</div>
         <div className="location">Sonoma County, California</div>
       </Date>
-      <Section>
-        <Title>How We Met</Title>
-        <Subtitle>2016</Subtitle>
-        <Text>Our coworker introduced us.</Text>
-      </Section>
     </Container>
   </Layout>
 )
