@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 
 const HeaderContainer = styled.header`
   font-family: "Raleway";
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 1;
   background-color: #fff;

@@ -33,13 +33,13 @@ const Note = styled.div`
 `;
 
 const Day = styled.div`
-  margin-left: 20px;
+  margin-left: 25px;
   border-left: 1px solid #000;
   position: relative;
 `;
 
 const Event = styled.div`
-  padding: 20px;
+  padding: 20px 30px;
 
   &::before {
     content: ' ';
