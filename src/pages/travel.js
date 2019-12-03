@@ -51,7 +51,21 @@ const TravelPage = () => (
           If you are flying in, here are the nearby airports:
           <br />
           <br />
-          San Franscisco International Airport (SFO) - 1hr 30 minute drive to
+          <ol>
+            <li>
+              San Franscisco International Airport (SFO) - 1hr 30 minute drive
+              to Sonoma
+            </li>
+            <li>
+              Oakland International Airport (OAK) - 1hr 15 minute drive to
+              Sonoma
+            </li>
+            <li>San Jose International Airport (SJC) - 2hr drive to Sonoma</li>
+            <li>
+              Charles M. Schulz Sonoma County Airport (STS) - You have arrived
+            </li>
+          </ol>
+          {/* San Franscisco International Airport (SFO) - 1hr 30 minute drive to
           Sonoma
           <br />
           Oakland International Airport (OAK) - 1hr 15 minute drive to Sonoma
@@ -59,7 +73,7 @@ const TravelPage = () => (
           San Jose International Airport (SJC) - 2hr drive to Sonoma
           <br />
           Charles M. Schulz Sonoma County Airport (STS) - You have arrived
-          <br />
+          <br /> */}
           <br />
           These quotes are for drive times without traffic, and Bay Area traffic
           is absolutely a real thing, even on weekends. So please plan your

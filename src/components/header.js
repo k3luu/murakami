@@ -44,6 +44,10 @@ const SiteName = styled.div`
     color: #000;
     font-weight: 300;
     padding: 10px;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 `
 
@@ -68,6 +72,7 @@ const Navigation = styled.nav`
     &:hover,
     &.active {
       border-color: ${palette.primaryColor};
+      text-decoration: none;
     }
   }
 `
