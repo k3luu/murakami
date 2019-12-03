@@ -1,9 +1,9 @@
 {
   "name": "murakami-wedding",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Jenny Luu and Tyler Murakami's Wedding Website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Kathy Luu <kathyluu820@gmail.com>",
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
@@ -21,7 +21,6 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.11.0",
-    "react-full-page": "^0.1.7",
     "react-helmet": "^5.2.1",
     "react-masonry-component": "^6.2.1",
     "typeface-raleway": "0.0.75",

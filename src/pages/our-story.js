@@ -2,7 +2,6 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
-import { FullPage, Slide } from "react-full-page"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -24,65 +23,57 @@ const ProposalPage = () => {
   return (
     <Layout>
       <SEO title="The Proposal" />
-      <FullPage controls={false} duration={1000}>
-        <Slide>
-          <emotionStyles.Section>
-            <h1>How We Met</h1>
-            <emotionStyles.Text>
-              Where all amazing love stories begin. At work! Though we never
-              worked on any projects together. We met through mutual friends and
-              at social events years before anything ever happened. But if you
-              ask Tyler's friends, they'd say he's always had something for
-              Jenny. <br /> <br />
-              Funny enough, Jenny tried to recruit Tyler (top performing
-              Deloitte associate) to one of her teams and he turned her down!
-              Imagine what could have or (wouldn't have) happened if he agreed.
-            </emotionStyles.Text>
-            <Img
-              style={{ width: "30%", maxHeight: 600 }}
-              fluid={photo.placeholderImage.childImageSharp.fluid}
-            />
-          </emotionStyles.Section>
-        </Slide>
-        <Slide>
-          <emotionStyles.Section>
-            <h1>How He Asked</h1>
-            <emotionStyles.Text>On a mountain.</emotionStyles.Text>
-          </emotionStyles.Section>
-        </Slide>
-        <Slide>
-          <emotionStyles.Section>
-            <h1>Fun Facts</h1>
-            <emotionStyles.Text>
-              - Our first date was at the California Academy of Sciences. This
-              is exactly how the conversation went:
-              <br />
-              <br />
-              Jenny: Do you like sharks? (with absolutely no context)
-              <br />
-              Tyler: Are you talking about Shark Week at the California Academy
-              of Sciences?!
-              <br />
-              <br />
-              It's scary how much we think alike, but it goes back to even the
-              idea for our first date. And that's why this Jenga piece exists -
-              Tyler's friends cheering him on for Shark Week.
-              <br />
-              <br />
-              - Our sisters live together! This is always a tidbit that confuses
-              everyone. They think we met through our sisters, but really they
-              met through us. We were nervous about it, but it's worked out
-              better than we expected. They even hosted the first dinner
-              gathering between the Luu's and the Murakami's (home-cooked meal
-              included).
-              <br />
-              <br />- Tyler has made Jenny a "punctual" person. Although showing
-              up to a movie an hour early sounds more "compulsive" than it does
-              "punctual".
-            </emotionStyles.Text>
-          </emotionStyles.Section>
-        </Slide>
-      </FullPage>
+      <emotionStyles.Section>
+        <h1>How We Met</h1>
+        <emotionStyles.Text>
+          Where all amazing love stories begin. At work! Though we never worked
+          on any projects together. We met through mutual friends and at social
+          events years before anything ever happened. But if you ask Tyler's
+          friends, they'd say he's always had something for Jenny. <br /> <br />
+          Funny enough, Jenny tried to recruit Tyler (top performing Deloitte
+          associate) to one of her teams and he turned her down! Imagine what
+          could have or (wouldn't have) happened if he agreed.
+        </emotionStyles.Text>
+        <Img
+          style={{ width: "30%", maxHeight: 600 }}
+          fluid={photo.placeholderImage.childImageSharp.fluid}
+        />
+      </emotionStyles.Section>
+
+      <emotionStyles.Section>
+        <h1>How He Asked</h1>
+        <emotionStyles.Text>On a mountain.</emotionStyles.Text>
+      </emotionStyles.Section>
+
+      <emotionStyles.Section>
+        <h1>Fun Facts</h1>
+        <emotionStyles.Text>
+          - Our first date was at the California Academy of Sciences. This is
+          exactly how the conversation went:
+          <br />
+          <br />
+          Jenny: Do you like sharks? (with absolutely no context)
+          <br />
+          Tyler: Are you talking about Shark Week at the California Academy of
+          Sciences?!
+          <br />
+          <br />
+          It's scary how much we think alike, but it goes back to even the idea
+          for our first date. And that's why this Jenga piece exists - Tyler's
+          friends cheering him on for Shark Week.
+          <br />
+          <br />
+          - Our sisters live together! This is always a tidbit that confuses
+          everyone. They think we met through our sisters, but really they met
+          through us. We were nervous about it, but it's worked out better than
+          we expected. They even hosted the first dinner gathering between the
+          Luu's and the Murakami's (home-cooked meal included).
+          <br />
+          <br />- Tyler has made Jenny a "punctual" person. Although showing up
+          to a movie an hour early sounds more "compulsive" than it does
+          "punctual".
+        </emotionStyles.Text>
+      </emotionStyles.Section>
     </Layout>
   )
 }
