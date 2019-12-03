@@ -40,7 +40,9 @@ template {
   display: none;
 }
 a {
+  color: #74a3b7;
   background-color: transparent;
+  font-weight: bold;
   text-decoration: none;
   -webkit-text-decoration-skip: objects;
 }
@@ -245,7 +247,7 @@ h2 {
   margin-bottom: 1.45rem;
   color: inherit;
   font-family: "Raleway";
-  font-weight: bold;
+  font-weight: normal;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
   line-height: 1.1;
@@ -306,12 +308,13 @@ h6 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   color: inherit;
-  font-family: "Raleway";
+  font-family: "Sacramento";
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.78405rem;
+  font-size: 32px;
+  letter-spacing: 0.6px;
   line-height: 1.1;
 }
 hgroup {

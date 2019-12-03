@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import * as palette from "../styles/palette";
+import * as palette from "../styles/palette"
 
 const DateTitle = styled.div`
   display: flex;
@@ -14,9 +14,9 @@ const DateTitle = styled.div`
   @media (max-width: 1023px) {
     height: auto;
     align-items: baseline;
-    margin-top: 20px;
+    margin: 20px 0;
   }
-`;
+`
 
 const Date = styled.div`
   background: ${palette.primaryColor};
@@ -30,55 +30,46 @@ const Date = styled.div`
   min-width: 50px;
   line-height: 50px;
   text-align: center;
-`;
+`
 
 const DateSubtitle = styled.div`
   display: flex;
   align-items: center;
   margin-left: 20px;
-  
+
   @media (max-width: 1023px) {
     display: block;
   }
-`;
+`
 
 const Weekday = styled.h6`
-  font-family: "Sacramento";
-  font-size: 32px;
-  letter-spacing: 0.6px;
-  margin-bottom: 0;
   margin-right: 20px;
-`;
+`
 
 const Note = styled.p`
   font-size: 14px;
   margin: 10px 20px 10px 0;
   max-width: 500px;
-
-  a {
-    color: ${palette.primaryColor};
-    font-weight: bold;
-  }
-`;
+`
 
 const Day = styled.div`
   margin-left: 25px;
   border-left: 1px solid ${palette.primaryColor};
   position: relative;
-`;
+`
 
 const Event = styled.div`
   font-size: 18px;
   padding: 20px 50px;
 
   &::before {
-    content: ' ';
+    content: " ";
     position: absolute;
     left: -4px;
     height: 7px;
     width: 7px;
     margin-top: 7px;
-    border-radius: 100px;    
+    border-radius: 100px;
     background: ${palette.primaryColor};
   }
 
@@ -91,8 +82,7 @@ const Event = styled.div`
     font-style: italic;
     padding: 5px 0;
   }
-`;
-
+`
 
 const SchedulePage = () => (
   <Layout>
@@ -121,7 +111,12 @@ const SchedulePage = () => (
       <Event>
         <div class="title">Cocktail Reception [Everyone invited]</div>
         <div class="time">8 PM - 10 PM</div>
-        <Note>We'll be hosting a cocktail reception for guests who are arriving in Sonoma early. This is an optional event so don't feel obliged but we're happy to have you join in. Please RSVP <Link to="/rsvp">here</Link>.</Note>
+        <Note>
+          We'll be hosting a cocktail reception for guests who are arriving in
+          Sonoma early. This is an optional event so don't feel obliged but
+          we're happy to have you join in. Please RSVP{" "}
+          <Link to="/rsvp">here</Link>.
+        </Note>
       </Event>
     </Day>
 
@@ -129,7 +124,16 @@ const SchedulePage = () => (
       <Date>19</Date>
       <DateSubtitle>
         <Weekday>Saturday</Weekday>
-        <Note>The wedding ceremony will begin at 5pm at Sonoma Winery located at <a href="http://maps.google.com/maps?q=25200 Arnold Dr, Sonoma, CA 95476" target="_blank">25200 Arnold Dr, Sonoma, CA 95476</a>. Reception to follow.</Note>
+        <Note>
+          The wedding ceremony will begin at 5pm at Sonoma Winery located at{" "}
+          <a
+            href="http://maps.google.com/maps?q=25200 Arnold Dr, Sonoma, CA 95476"
+            target="_blank"
+          >
+            25200 Arnold Dr, Sonoma, CA 95476
+          </a>
+          . Reception to follow.
+        </Note>
       </DateSubtitle>
     </DateTitle>
     <Day>
@@ -147,7 +151,8 @@ const SchedulePage = () => (
       </Event>
       <Event>
         <div class="title">Dinner</div>
-        <div class="time">7:30 PM - 11:00 PM</div></Event>
+        <div class="time">7:30 PM - 11:00 PM</div>
+      </Event>
       <Event>
         <div class="title">Dancing</div>
         <div class="time">9:00 PM - 11 PM</div>
@@ -158,7 +163,11 @@ const SchedulePage = () => (
       <Date>20</Date>
       <DateSubtitle>
         <Weekday>Sunday</Weekday>
-        <Note>There will be no hosted events on Sunday. We will leave it to you to make the most of the weekend in Sonoma. Check out our recommendations on the <Link to="/travel">Travel page</Link>.</Note>
+        <Note>
+          There will be no hosted events on Sunday. We will leave it to you to
+          make the most of the weekend in Sonoma. Check out our recommendations
+          on the <Link to="/travel">Travel page</Link>.
+        </Note>
       </DateSubtitle>
     </DateTitle>
   </Layout>

@@ -9,7 +9,7 @@ const List = styled.ul`
   list-style: none;
 
   li {
-    border-bottom: 1px solid ${palette.secondaryColor};
+    border-bottom: 1px solid ${palette.mystic};
     padding: 30px 0;
   }
 
