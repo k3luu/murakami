@@ -3,6 +3,12 @@ import styled from "@emotion/styled"
 
 export const Section = styled.div`
   padding-bottom: 50px;
+  max-width: 950px;
+  margin: 0 auto;
+
+  @media (max-width: 1023px) {
+    margin: 80px 20px;
+  }
 `
 
 export const Title = styled.div`

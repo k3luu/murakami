@@ -2,23 +2,11 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
+import { FullPage, Slide } from "react-full-page"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import * as emotionStyles from "../styles/emotionStyles"
-
-const Container = styled.div`
-  display: flex;
-
-  > div {
-    flex-grow: 1;
-    max-width: 50%;
-
-    &:first-child {
-      padding-right: 20px;
-    }
-  }
-`
 
 const ProposalPage = () => {
   const photo = useStaticQuery(graphql`
@@ -36,8 +24,8 @@ const ProposalPage = () => {
   return (
     <Layout>
       <SEO title="The Proposal" />
-      <Container>
-        <div>
+      <FullPage controls={false} duration={1000}>
+        <Slide>
           <emotionStyles.Section>
             <h1>How We Met</h1>
             <emotionStyles.Text>
@@ -50,11 +38,19 @@ const ProposalPage = () => {
               Deloitte associate) to one of her teams and he turned her down!
               Imagine what could have or (wouldn't have) happened if he agreed.
             </emotionStyles.Text>
+            <Img
+              style={{ width: "30%", maxHeight: 600 }}
+              fluid={photo.placeholderImage.childImageSharp.fluid}
+            />
           </emotionStyles.Section>
+        </Slide>
+        <Slide>
           <emotionStyles.Section>
             <h1>How He Asked</h1>
             <emotionStyles.Text>On a mountain.</emotionStyles.Text>
           </emotionStyles.Section>
+        </Slide>
+        <Slide>
           <emotionStyles.Section>
             <h1>Fun Facts</h1>
             <emotionStyles.Text>
@@ -85,13 +81,8 @@ const ProposalPage = () => {
               "punctual".
             </emotionStyles.Text>
           </emotionStyles.Section>
-        </div>
-
-        <Img
-          style={{ width: "30%", maxHeight: 600 }}
-          fluid={photo.placeholderImage.childImageSharp.fluid}
-        />
-      </Container>
+        </Slide>
+      </FullPage>
     </Layout>
   )
 }

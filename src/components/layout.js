@@ -17,7 +17,7 @@ import "./layout.css"
 
 const Main = styled.main`
   &:not(.home) {
-    max-width: 1000px;
+    max-width: 950px;
     margin: 150px auto;
 
     @media (max-width: 1023px) {
