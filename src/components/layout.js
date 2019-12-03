@@ -21,7 +21,7 @@ const Main = styled.main`
     margin: 150px auto;
 
     @media (max-width: 1023px) {
-      margin: 80px 10px;
+      margin: 80px 20px;
     }
   }
 `
@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
   `)
 
   function handleClassName() {
-    if (typeof window === 'object' && window.location.pathname === "/") {
+    if (typeof window === "object" && window.location.pathname === "/") {
       return "home"
     }
 

@@ -80,7 +80,7 @@ const Navigation = styled.nav`
 const MobileMenu = styled.div`
   position: absolute;
   top: 0;
-  left: 10px;
+  left: 20px;
 
   @media (min-width: 1024px) {
     display: none;
@@ -108,6 +108,7 @@ const MobileNav = styled.div`
       font-size: 14px;
       font-weight: bold;
       background: #000;
+      text-decoration: none;
     }
   }
 `
