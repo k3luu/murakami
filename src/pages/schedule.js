@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import * as palette from "../styles/palette";
 
 const DateTitle = styled.div`
   display: flex;
@@ -18,8 +19,11 @@ const DateTitle = styled.div`
 `;
 
 const Date = styled.div`
+  background: ${palette.primaryColor};
   border-radius: 100px;
-  border: 1px solid #000;
+  border: 1px solid ${palette.primaryColor};
+  color: ${palette.white};
+  font-weight: bold;
   height: 50px;
   min-height: 50px;
   width: 50px;
@@ -40,25 +44,31 @@ const DateSubtitle = styled.div`
 
 const Weekday = styled.h6`
   font-family: "Sacramento";
-  font-size: 28px;
-  letter-spacing: 1.2px;
+  font-size: 32px;
+  letter-spacing: 0.6px;
   margin-bottom: 0;
   margin-right: 20px;
 `;
 
-const Note = styled.div`
-  font-size: 12px;
+const Note = styled.p`
+  font-size: 14px;
   margin: 10px 20px 10px 0;
   max-width: 500px;
+
+  a {
+    color: ${palette.primaryColor};
+    font-weight: bold;
+  }
 `;
 
 const Day = styled.div`
   margin-left: 25px;
-  border-left: 1px solid #000;
+  border-left: 1px solid ${palette.primaryColor};
   position: relative;
 `;
 
 const Event = styled.div`
+  font-size: 18px;
   padding: 20px 50px;
 
   &::before {
@@ -69,7 +79,17 @@ const Event = styled.div`
     width: 7px;
     margin-top: 7px;
     border-radius: 100px;    
-    background: #000;
+    background: ${palette.primaryColor};
+  }
+
+  .title {
+    font-weight: 500;
+  }
+
+  .time {
+    font-size: 16px;
+    font-style: italic;
+    padding: 5px 0;
   }
 `;
 
@@ -87,20 +107,20 @@ const SchedulePage = () => (
     </DateTitle>
     <Day>
       <Event>
-        <div>Wine Tasting [Wedding Party only]</div>
-        <div>3:30 - 5</div>
+        <div class="title">Wine Tasting [Wedding Party only]</div>
+        <div class="time">3:30 PM - 5 PM</div>
       </Event>
       <Event>
-        <div>Wedding Rehearsal [Wedding Party only]</div>
-        <div>5 - 6</div>
+        <div class="title">Wedding Rehearsal [Wedding Party only]</div>
+        <div class="time">5 PM - 6 PM</div>
       </Event>
       <Event>
-        <div>Rehearsal Dinner [Wedding Party only]</div>
-        <div>6 - 8</div>
+        <div class="title">Rehearsal Dinner [Wedding Party only]</div>
+        <div class="time">6 PM - 8 PM</div>
       </Event>
       <Event>
-        <div>Cocktail Reception [Everyone invited]</div>
-        <div>8 - 10</div>
+        <div class="title">Cocktail Reception [Everyone invited]</div>
+        <div class="time">8 PM - 10 PM</div>
         <Note>We'll be hosting a cocktail reception for guests who are arriving in Sonoma early. This is an optional event so don't feel obliged but we're happy to have you join in. Please RSVP <Link to="/rsvp">here</Link>.</Note>
       </Event>
     </Day>
@@ -109,28 +129,28 @@ const SchedulePage = () => (
       <Date>19</Date>
       <DateSubtitle>
         <Weekday>Saturday</Weekday>
-        <Note>The wedding ceremony will begin at 5pm at Sonoma Winery located at 25200 Arnold Dr, Sonoma, CA 95476. Reception to follow.</Note>
+        <Note>The wedding ceremony will begin at 5pm at Sonoma Winery located at <a href="http://maps.google.com/maps?q=25200 Arnold Dr, Sonoma, CA 95476" target="_blank">25200 Arnold Dr, Sonoma, CA 95476</a>. Reception to follow.</Note>
       </DateSubtitle>
     </DateTitle>
     <Day>
       <Event>
-        <div>Guests arrive</div>
-        <div>5:00</div>
+        <div class="title">Guests arrive</div>
+        <div class="time">5:00 PM</div>
       </Event>
       <Event>
-        <div>Ceremony begins</div>
-        <div>5:30</div>
+        <div class="title">Ceremony begins</div>
+        <div class="time">5:30 PM</div>
       </Event>
       <Event>
-        <div>Cocktail hour</div>
-        <div>6:00 - 7:30</div>
+        <div class="title">Cocktail hour</div>
+        <div class="time">6:00 PM - 7:30 PM</div>
       </Event>
       <Event>
-        <div>Dinner</div>
-        <div>7:30 - 11:00</div></Event>
+        <div class="title">Dinner</div>
+        <div class="time">7:30 PM - 11:00 PM</div></Event>
       <Event>
-        <div>Dancing</div>
-        <div>9:00 - 11</div>
+        <div class="title">Dancing</div>
+        <div class="time">9:00 PM - 11 PM</div>
       </Event>
     </Day>
 
