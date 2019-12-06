@@ -35,7 +35,7 @@ const ProposalPage = () => {
           could have or (wouldn't have) happened if he agreed.
         </emotionStyles.Text>
         <Img
-          style={{ width: "30%", maxHeight: 600 }}
+          style={{ maxHeight: 600 }}
           fluid={photo.placeholderImage.childImageSharp.fluid}
         />
       </emotionStyles.Section>
