@@ -52,7 +52,7 @@ const Date = styled.div`
 
   div.location {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 600;
 
     @media (max-width: 1024px) {
       font-size: 16px;
@@ -65,11 +65,6 @@ const IndexPage = () => (
     <SEO title="Home" />
     <HeroImageContainer>
       <Image />
-      {/* <Names>
-        <div>Tyler Murakami</div>
-        <div>&</div>
-        <div>Jenny Luu</div>
-      </Names> */}
       <Date>
         <div className="date">September 19, 2020</div>
         <div className="location">Sonoma County, California</div>

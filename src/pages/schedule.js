@@ -11,7 +11,7 @@ import * as emotionStyles from "../styles/emotionStyles"
 const DateTitle = styled.div`
   display: flex;
   align-items: center;
-  height: 80px;
+  height: 100px;
 
   @media (max-width: 1023px) {
     height: auto;
@@ -62,7 +62,7 @@ const Day = styled.div`
 
 const Event = styled.div`
   font-size: 18px;
-  padding: 20px 50px;
+  padding: 25px 50px;
 
   &::before {
     content: " ";
@@ -89,7 +89,7 @@ const Event = styled.div`
 const SchedulePage = () => {
   const photo = useStaticQuery(graphql`
     query {
-      pagePhoto: file(relativePath: { eq: "schedule.jpeg" }) {
+      pagePhoto: file(relativePath: { eq: "schedule.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 6000) {
             ...GatsbyImageSharpFluid
@@ -104,7 +104,6 @@ const SchedulePage = () => {
       <SEO title="Schedule" />
       <Img
         className="page__image"
-        style={{ maxHeight: 600 }}
         fluid={photo.pagePhoto.childImageSharp.fluid}
       />
       <emotionStyles.pageContainer>

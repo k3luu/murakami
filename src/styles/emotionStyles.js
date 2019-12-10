@@ -25,6 +25,16 @@ export const Text = styled.p`
   margin: 30px 0;
 `
 
+export const TextPhotoSection = styled.div`
+  display: flex;
+
+  .photo {
+    width: 50%;
+    min-width: 300px;
+    margin: 0 30px;
+  }
+`
+
 export const pageContainer = styled.div`
   max-height: calc(100vh - 90px);
   height: calc(100vh - 90px);

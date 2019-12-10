@@ -16,7 +16,8 @@ import Header from "./header"
 import "./layout.css"
 
 const Main = styled.main`
-  &:not(.home .schedule) {
+  &.our-story,
+  &.photos {
     max-width: 950px;
     margin: 150px auto;
 
@@ -25,7 +26,9 @@ const Main = styled.main`
     }
   }
 
-  &.schedule {
+  &.schedule,
+  &.faq,
+  &.travel {
     display: flex;
     margin-top: 90px;
 
@@ -45,7 +48,11 @@ const Main = styled.main`
       }
 
       @media (max-width: 1023px) {
-        width: 100%;
+        width: 100vw;
+        min-width: unset;
+        max-height: 70vh;
+        height: 100%;
+        min-height: unset;
       }
     }
   }

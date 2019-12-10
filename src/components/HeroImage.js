@@ -30,7 +30,7 @@ const Image = () => {
     <Img
       style={{ height: "100%" }}
       fluid={data.placeholderImage.childImageSharp.fluid}
-      imgStyle={{ objectPosition: "top" }}
+      imgStyle={{ objectPosition: "center" }}
     />
   )
 }
