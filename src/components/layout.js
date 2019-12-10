@@ -26,15 +26,26 @@ const Main = styled.main`
   }
 
   &.schedule {
-    margin-top: 90px;
     display: flex;
+    margin-top: 90px;
+
+    @media (max-width: 1023px) {
+      display: block;
+      margin-top: 50px;
+    }
 
     .page__image {
       width: 40%;
+      min-width: 500px;
       height: calc(100vh - 90px);
+      min-height: calc(100vh - 90px);
 
       img {
         border-radius: 0;
+      }
+
+      @media (max-width: 1023px) {
+        width: 100%;
       }
     }
   }

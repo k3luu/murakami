@@ -31,4 +31,9 @@ export const pageContainer = styled.div`
   overflow: auto;
   padding: 20px;
   flex-grow: 1;
+
+  @media (max-width: 1023px) {
+    max-height: unset;
+    height: unset;
+  }
 `
