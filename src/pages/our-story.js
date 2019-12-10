@@ -17,6 +17,13 @@ const ProposalPage = () => {
           }
         }
       }
+      jengaPhoto: file(relativePath: { eq: "jenga.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 6000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -61,6 +68,12 @@ const ProposalPage = () => {
           It's scary how much we think alike, but it goes back to even the idea
           for our first date. And that's why this Jenga piece exists - Tyler's
           friends cheering him on for Shark Week.
+          <br />
+          <br />
+          <Img
+            style={{ maxWidth: 300 }}
+            fluid={photo.jengaPhoto.childImageSharp.fluid}
+          />
           <br />
           <br />
           - Our sisters live together! This is always a tidbit that confuses
