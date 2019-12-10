@@ -23,8 +23,8 @@ const Row = styled.div`
 `
 
 const Card = styled.div`
-  width: 32%;
-  margin: 0 10px;
+  width: 30%;
+  margin: 0 20px;
 
   @media (max-width: 767px) {
     width: 100%;

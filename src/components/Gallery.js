@@ -4,15 +4,32 @@ import Img from "gatsby-image"
 import Masonry from "react-masonry-component"
 import styled from "@emotion/styled"
 
-const ImageItem = styled.li`
-  list-style: none;
-  max-height: 300px;
-  width: 30%;
-  height: 100%;
+const Container = styled.div`
+`;
+
+const ImageItem = styled.div`
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 450px;
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  > div {
+    width: 450px;
+
+    @media (max-width: 1023px) {
+      width: 100%;
+    }
+  }
+  
 `
 
 const masonryOptions = {
   transitionDuration: 0,
+
 }
 
 const imagesLoadedOptions = {}
@@ -47,12 +64,6 @@ function Gallery() {
           fluid={src}
           key={elem.node.id}
           alt={elem.node.name.replace(/-/g, " ").substring(2)}
-          style={{
-            height: "100%",
-            width: "100%",
-            maxWidth: 300,
-            maxHeight: 300,
-          }}
         />
       </ImageItem>
     )
@@ -61,7 +72,7 @@ function Gallery() {
   return (
     <Masonry
       className=""
-      elementType="ul"
+      elementType={Container}
       options={masonryOptions}
       disableImagesLoaded={false} // default false
       updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
