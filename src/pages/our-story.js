@@ -24,6 +24,13 @@ const ProposalPage = () => {
           }
         }
       }
+      sistersPhoto: file(relativePath: { eq: "sisters.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 6000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -54,6 +61,23 @@ const ProposalPage = () => {
 
       <emotionStyles.Section>
         <h1>Fun Facts</h1>
+        <div>
+          <emotionStyles.Text>
+            - Our sisters live together! This is always a tidbit that confuses
+            everyone. They think we met through our sisters, but really they met
+            through us. We were nervous about it, but it's worked out better
+            than we expected. They even hosted the first dinner gathering
+            between the Luu's and the Murakami's (home-cooked meal included).
+            <br />
+            <br />- Tyler has made Jenny a "punctual" person. Although showing
+            up to a movie an hour early sounds more "compulsive" than it does
+            "punctual".
+          </emotionStyles.Text>
+          <Img
+            style={{ maxWidth: 300 }}
+            fluid={photo.sistersPhoto.childImageSharp.fluid}
+          />
+        </div>
         <emotionStyles.Text>
           - Our first date was at the California Academy of Sciences. This is
           exactly how the conversation went:
@@ -81,6 +105,12 @@ const ProposalPage = () => {
           through us. We were nervous about it, but it's worked out better than
           we expected. They even hosted the first dinner gathering between the
           Luu's and the Murakami's (home-cooked meal included).
+          <br />
+          <br />
+          <Img
+            style={{ maxWidth: 300 }}
+            fluid={photo.sistersPhoto.childImageSharp.fluid}
+          />
           <br />
           <br />- Tyler has made Jenny a "punctual" person. Although showing up
           to a movie an hour early sounds more "compulsive" than it does

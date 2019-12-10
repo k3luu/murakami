@@ -16,12 +16,26 @@ import Header from "./header"
 import "./layout.css"
 
 const Main = styled.main`
-  &:not(.home) {
+  &:not(.home .schedule) {
     max-width: 950px;
     margin: 150px auto;
 
     @media (max-width: 1023px) {
       margin: 80px 20px;
+    }
+  }
+
+  &.schedule {
+    margin-top: 90px;
+    display: flex;
+
+    .page__image {
+      width: 40%;
+      height: calc(100vh - 90px);
+
+      img {
+        border-radius: 0;
+      }
     }
   }
 `
@@ -42,7 +56,9 @@ const Layout = ({ children }) => {
       return "home"
     }
 
-    return ""
+    return typeof window === "object"
+      ? window.location.pathname.substring(1)
+      : ""
   }
 
   return (

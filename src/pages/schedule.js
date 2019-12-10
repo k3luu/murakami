@@ -1,10 +1,12 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import * as palette from "../styles/palette"
+import * as emotionStyles from "../styles/emotionStyles"
 
 const DateTitle = styled.div`
   display: flex;
@@ -84,93 +86,114 @@ const Event = styled.div`
   }
 `
 
-const SchedulePage = () => (
-  <Layout>
-    <SEO title="Schedule" />
-    <h1>Schedule</h1>
+const SchedulePage = () => {
+  const photo = useStaticQuery(graphql`
+    query {
+      pagePhoto: file(relativePath: { eq: "schedule.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 6000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
 
-    <DateTitle>
-      <Date>18</Date>
-      <DateSubtitle>
-        <Weekday>Friday</Weekday>
-      </DateSubtitle>
-    </DateTitle>
-    <Day>
-      <Event>
-        <div class="title">Wine Tasting [Wedding Party only]</div>
-        <div class="time">3:30 PM - 5 PM</div>
-      </Event>
-      <Event>
-        <div class="title">Wedding Rehearsal [Wedding Party only]</div>
-        <div class="time">5 PM - 6 PM</div>
-      </Event>
-      <Event>
-        <div class="title">Rehearsal Dinner [Wedding Party only]</div>
-        <div class="time">6 PM - 8 PM</div>
-      </Event>
-      <Event>
-        <div class="title">Cocktail Reception [Everyone invited]</div>
-        <div class="time">8 PM - 10 PM</div>
-        <Note>
-          We'll be hosting a cocktail reception for guests who are arriving in
-          Sonoma early. This is an optional event so don't feel obliged but
-          we're happy to have you join in. Please RSVP{" "}
-          <Link to="/rsvp">here</Link>.
-        </Note>
-      </Event>
-    </Day>
+  return (
+    <Layout>
+      <SEO title="Schedule" />
+      <Img
+        className="page__image"
+        style={{ maxHeight: 600 }}
+        fluid={photo.pagePhoto.childImageSharp.fluid}
+      />
+      <emotionStyles.pageContainer>
+        <h1>Schedule</h1>
 
-    <DateTitle>
-      <Date>19</Date>
-      <DateSubtitle>
-        <Weekday>Saturday</Weekday>
-        <Note>
-          The wedding ceremony will begin at 5pm at Sonoma Winery located at{" "}
-          <a
-            href="http://maps.google.com/maps?q=25200 Arnold Dr, Sonoma, CA 95476"
-            target="_blank"
-          >
-            25200 Arnold Dr, Sonoma, CA 95476
-          </a>
-          . Reception to follow.
-        </Note>
-      </DateSubtitle>
-    </DateTitle>
-    <Day>
-      <Event>
-        <div class="title">Guests arrive</div>
-        <div class="time">5:00 PM</div>
-      </Event>
-      <Event>
-        <div class="title">Ceremony begins</div>
-        <div class="time">5:30 PM</div>
-      </Event>
-      <Event>
-        <div class="title">Cocktail hour</div>
-        <div class="time">6:00 PM - 7:30 PM</div>
-      </Event>
-      <Event>
-        <div class="title">Dinner</div>
-        <div class="time">7:30 PM - 11:00 PM</div>
-      </Event>
-      <Event>
-        <div class="title">Dancing</div>
-        <div class="time">9:00 PM - 11 PM</div>
-      </Event>
-    </Day>
+        <DateTitle>
+          <Date>18</Date>
+          <DateSubtitle>
+            <Weekday>Friday</Weekday>
+          </DateSubtitle>
+        </DateTitle>
+        <Day>
+          <Event>
+            <div class="title">Wine Tasting [Wedding Party only]</div>
+            <div class="time">3:30 PM - 5 PM</div>
+          </Event>
+          <Event>
+            <div class="title">Wedding Rehearsal [Wedding Party only]</div>
+            <div class="time">5 PM - 6 PM</div>
+          </Event>
+          <Event>
+            <div class="title">Rehearsal Dinner [Wedding Party only]</div>
+            <div class="time">6 PM - 8 PM</div>
+          </Event>
+          <Event>
+            <div class="title">Cocktail Reception [Everyone invited]</div>
+            <div class="time">8 PM - 10 PM</div>
+            <Note>
+              We'll be hosting a cocktail reception for guests who are arriving
+              in Sonoma early. This is an optional event so don't feel obliged
+              but we're happy to have you join in. Please RSVP{" "}
+              <Link to="/rsvp">here</Link>.
+            </Note>
+          </Event>
+        </Day>
 
-    <DateTitle>
-      <Date>20</Date>
-      <DateSubtitle>
-        <Weekday>Sunday</Weekday>
-        <Note>
-          There will be no hosted events on Sunday. We will leave it to you to
-          make the most of the weekend in Sonoma. Check out our recommendations
-          on the <Link to="/travel">Travel page</Link>.
-        </Note>
-      </DateSubtitle>
-    </DateTitle>
-  </Layout>
-)
+        <DateTitle>
+          <Date>19</Date>
+          <DateSubtitle>
+            <Weekday>Saturday</Weekday>
+            <Note>
+              The wedding ceremony will begin at 5pm at Sonoma Winery located at{" "}
+              <a
+                href="http://maps.google.com/maps?q=25200 Arnold Dr, Sonoma, CA 95476"
+                target="_blank"
+              >
+                25200 Arnold Dr, Sonoma, CA 95476
+              </a>
+              . Reception to follow.
+            </Note>
+          </DateSubtitle>
+        </DateTitle>
+        <Day>
+          <Event>
+            <div class="title">Guests arrive</div>
+            <div class="time">5:00 PM</div>
+          </Event>
+          <Event>
+            <div class="title">Ceremony begins</div>
+            <div class="time">5:30 PM</div>
+          </Event>
+          <Event>
+            <div class="title">Cocktail hour</div>
+            <div class="time">6:00 PM - 7:30 PM</div>
+          </Event>
+          <Event>
+            <div class="title">Dinner</div>
+            <div class="time">7:30 PM - 11:00 PM</div>
+          </Event>
+          <Event>
+            <div class="title">Dancing</div>
+            <div class="time">9:00 PM - 11 PM</div>
+          </Event>
+        </Day>
+
+        <DateTitle>
+          <Date>20</Date>
+          <DateSubtitle>
+            <Weekday>Sunday</Weekday>
+            <Note>
+              There will be no hosted events on Sunday. We will leave it to you
+              to make the most of the weekend in Sonoma. Check out our
+              recommendations on the <Link to="/travel">Travel page</Link>.
+            </Note>
+          </DateSubtitle>
+        </DateTitle>
+      </emotionStyles.pageContainer>
+    </Layout>
+  )
+}
 
 export default SchedulePage
