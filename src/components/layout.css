@@ -209,7 +209,6 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
 img {
-  border-radius: 10px;
   box-shadow: #74a3b77a 1px 1px 8px -3px;
   max-width: 100%;
   margin-left: 0;

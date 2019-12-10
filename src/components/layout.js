@@ -40,12 +40,9 @@ const Main = styled.main`
     .page__image {
       width: 40%;
       min-width: 500px;
+      max-width: 500px;
       height: calc(100vh - 90px);
       min-height: calc(100vh - 90px);
-
-      img {
-        border-radius: 0;
-      }
 
       @media (max-width: 1023px) {
         width: 100vw;

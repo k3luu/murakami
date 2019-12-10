@@ -33,6 +33,16 @@ export const TextPhotoSection = styled.div`
     min-width: 300px;
     margin: 0 30px;
   }
+
+  @media (max-width: 1023px) {
+    display: block;
+
+    .photo {
+      margin: 0;
+      min-width: unset;
+      width: 100%;
+    }
+  }
 `
 
 export const pageContainer = styled.div`

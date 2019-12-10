@@ -67,7 +67,7 @@ const IndexPage = () => (
       <Image />
       <Date>
         <div className="date">September 19, 2020</div>
-        <div className="location">Sonoma County, California</div>
+        <div className="location">Sonoma, California</div>
       </Date>
     </HeroImageContainer>
   </Layout>
