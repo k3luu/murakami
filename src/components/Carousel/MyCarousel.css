@@ -1,0 +1,157 @@
+.mycarousel {
+  position: relative;
+  margin: 60px 0;
+}
+
+.mycarousel .expand {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  padding: 7px;
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.mycarousel__status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-weight: bolder;
+  font-size: 10px;
+}
+
+.mycarousel__arrow-container {
+  position: absolute;
+  display: flex;
+  top: 40%;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mycarousel__arrow-left {
+  margin-left: -20px;
+}
+
+.mycarousel__arrow-right {
+  margin-right: -20px;
+}
+
+.carousel-img {
+  width: 100%;
+  min-height: 600px;
+  background-color: #000;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.stepper__container {
+  position: absolute;
+  bottom: 5px;
+  display: flex;
+  width: 100%;
+}
+
+.stepper__icon-container {
+  margin: 0 auto;
+}
+
+.stepper__thumbnails {
+  position: relative;
+}
+
+.stepper__thumb-container {
+  display: flex;
+  width: 100%;
+  overflow: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.stepper__thumb {
+  min-width: 8.5%;
+  width: 100%;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+  background-color: #172121;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  margin: 10px 5px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.stepper__thumb.active {
+  border: 2px solid #f56700;
+  opacity: 1;
+}
+
+.stepper__thumb-arrow-container {
+  position: absolute;
+  display: flex;
+  top: 20%;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.stepper__thumb-arrow-left {
+  margin-left: -30px;
+}
+
+.stepper__thumb-arrow-right {
+  margin-right: -30px;
+}
+
+/* .mycarousel__overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  overflow-y: hidden;
+} */
+
+/* MODAL CAROUSEL */
+
+/* .mycarousel__modal {
+}
+
+.carousel-icon__compress {
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: #fff;
+    padding: 7px;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    z-index: 2;
+}
+*/
+
+@media only screen and (max-width: 960px) {
+  .mycarousel__arrow-container {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel-img {
+    min-height: 276px;
+  }
+
+  .stepper__thumb {
+    min-width: 25%;
+  }
+}

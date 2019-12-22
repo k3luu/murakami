@@ -14,6 +14,7 @@ import * as emotionStyles from "../styles/emotionStyles"
 
 const Card = styled.div`
   width: 100%;
+  max-width: 700px;
   margin: 50px 0;
 
   @media (max-width: 767px) {
@@ -88,6 +89,7 @@ const TravelPage = () => {
             Whether you're local or flying in to one of the bigger airports,
             getting to Sonoma is probably best by car.
           </p>
+          <br />
           <h5>Getting around in Sonoma</h5>
           <p>
             Ubers (and other Rideshare apps, I guess) are available throughout
@@ -163,12 +165,14 @@ const TravelPage = () => {
               </a>
             </div>
           </p>
-
+          <br />
           <h5>Arrival</h5>
           <p>
             When you arrive at the address, take the long driveway up the hill.
             The ceremony will take place on the upper lawn.
           </p>
+          <br />
+
           <h5>Parking</h5>
           <p>
             There is plenty of parking if you choose to drive there, but we

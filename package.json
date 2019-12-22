@@ -23,6 +23,7 @@
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
     "react-masonry-component": "^6.2.1",
+    "react-swipeable-views": "^0.13.3",
     "typeface-raleway": "0.0.75",
     "typeface-sacramento": "0.0.72"
   },

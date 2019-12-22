@@ -117,16 +117,16 @@ const SchedulePage = () => {
         </DateTitle>
         <Day>
           <Event>
-            <div class="title">Wedding Rehearsal [Wedding Party only]</div>
-            <div class="time">5 PM - 6 PM</div>
+            <div className="title">Wedding Rehearsal [Wedding Party only]</div>
+            <div className="time">5 PM - 6 PM</div>
           </Event>
           <Event>
-            <div class="title">Rehearsal Dinner [Wedding Party only]</div>
-            <div class="time">6 PM - 8 PM</div>
+            <div className="title">Rehearsal Dinner [Wedding Party only]</div>
+            <div className="time">6 PM - 8 PM</div>
           </Event>
           <Event>
-            <div class="title">Cocktail Reception [Everyone invited]</div>
-            <div class="time">8 PM - 10 PM</div>
+            <div className="title">Cocktail Reception [Everyone invited]</div>
+            <div className="time">8 PM - 10 PM</div>
             <Note>
               We'll be hosting a cocktail reception for guests who are arriving
               in Sonoma early. This is an optional event so don't feel obliged
@@ -154,20 +154,20 @@ const SchedulePage = () => {
         </DateTitle>
         <Day>
           <Event>
-            <div class="title">Guests arrive</div>
-            <div class="time">5:00 PM</div>
+            <div className="title">Guests arrive</div>
+            <div className="time">5:00 PM</div>
           </Event>
           <Event>
-            <div class="title">Ceremony begins</div>
-            <div class="time">5:30 PM</div>
+            <div className="title">Ceremony begins</div>
+            <div className="time">5:30 PM</div>
           </Event>
           <Event>
-            <div class="title">Cocktail hour</div>
-            <div class="time">6:00 PM - 7:00 PM</div>
+            <div className="title">Cocktail hour</div>
+            <div className="time">6:00 PM - 7:00 PM</div>
           </Event>
           <Event>
-            <div class="title">Dinner & Dancing</div>
-            <div class="time">7:00 PM - 11:00 PM</div>
+            <div className="title">Dinner & Dancing</div>
+            <div className="time">7:00 PM - 11:00 PM</div>
           </Event>
         </Day>
 

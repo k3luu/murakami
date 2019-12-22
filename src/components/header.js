@@ -196,9 +196,9 @@ const Header = ({ siteTitle }) => {
         <Link to="/registry" className={handleActiveTab("/registry")}>
           Registry
         </Link> */}
-        {/* <Link to="/rsvp" className={handleActiveTab("/rsvp")}>
+        <Link to="/rsvp" className={handleActiveTab("/rsvp")}>
           RSVP
-        </Link> */}
+        </Link>
         <Link to="/photos" className={handleActiveTab("/photos")}>
           Photos
         </Link>
