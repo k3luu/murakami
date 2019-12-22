@@ -117,10 +117,6 @@ const SchedulePage = () => {
         </DateTitle>
         <Day>
           <Event>
-            <div class="title">Wine Tasting [Wedding Party only]</div>
-            <div class="time">3:30 PM - 5 PM</div>
-          </Event>
-          <Event>
             <div class="title">Wedding Rehearsal [Wedding Party only]</div>
             <div class="time">5 PM - 6 PM</div>
           </Event>
@@ -167,15 +163,11 @@ const SchedulePage = () => {
           </Event>
           <Event>
             <div class="title">Cocktail hour</div>
-            <div class="time">6:00 PM - 7:30 PM</div>
+            <div class="time">6:00 PM - 7:00 PM</div>
           </Event>
           <Event>
-            <div class="title">Dinner</div>
-            <div class="time">7:30 PM - 11:00 PM</div>
-          </Event>
-          <Event>
-            <div class="title">Dancing</div>
-            <div class="time">9:00 PM - 11 PM</div>
+            <div class="title">Dinner & Dancing</div>
+            <div class="time">7:00 PM - 11:00 PM</div>
           </Event>
         </Day>
 

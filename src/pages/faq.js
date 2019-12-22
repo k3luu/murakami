@@ -152,7 +152,6 @@ const FaqPage = () => {
               <div>
                 #JT2020WeddingExperience as long as you have your #LuuandTy
               </div>
-              <div>#Marriedkami</div>
               <div>#JennyMarriedKami</div>
               <div>#JennyTysTheKnot</div>
               <div>#JLuu&TyMuu</div>
@@ -160,7 +159,8 @@ const FaqPage = () => {
               <div>#TyedtoLuu</div>
               <br />
               <br />
-              Ultimately, we're going with #
+              Ultimately, we're going with #Marriedkami so please tag us in so
+              we can track all the memories!
               <br />
               Check out the Photos page for your tagged photos!
             </p>

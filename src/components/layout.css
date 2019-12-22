@@ -330,7 +330,7 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 0;
+  margin-left: 1.45rem;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -495,6 +495,11 @@ address {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+u {
+  padding: 1px 0;
+  text-decoration: none;
+  border-bottom: 1px solid #000; /* neptune */
+}
 b {
   font-weight: bold;
 }
@@ -508,6 +513,9 @@ th {
   font-weight: bold;
 }
 li {
+  letter-spacing: 0.6px;
+  line-height: 1.46;
+  padding: 5px 0;
 }
 ol li {
   padding-left: 0;
