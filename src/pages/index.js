@@ -9,11 +9,15 @@ const HeroImageContainer = styled.div`
   width: 100%;
   height: 100vh;
   position: relative;
-  padding: 0;
+  padding: 80px 0 0 0;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-shadow: 3px 2px 7px #000;
+
+  @media (max-width: 1024px) {
+    padding: 0;
+  }
 `
 
 const Names = styled.div`
