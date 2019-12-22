@@ -86,10 +86,14 @@ const RsvpForm = props => {
       <Form
         name="cocktail-rsvp"
         method="POST"
-        netlify="true"
-        netlify-honeypot="bot-field"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
       >
         <input type="hidden" name="form-name" value="cocktail-rsvp" />
+
+        <label style={{ visibility: "hidden" }}>
+          Don’t fill this out if you're human: <input name="bot-field" />
+        </label>
 
         <FormSection>
           <TextInput

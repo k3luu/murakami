@@ -73,7 +73,7 @@ const Layout = ({ children }) => {
     }
 
     return typeof window === "object"
-      ? window.location.pathname.substring(1)
+      ? window.location.pathname.split("/")[1]
       : ""
   }
 
