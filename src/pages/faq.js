@@ -10,6 +10,7 @@ import * as emotionStyles from "../styles/emotionStyles"
 
 const List = styled.ul`
   list-style: none;
+  margin-left: 0;
 
   li {
     border-bottom: 1px solid ${palette.mystic};

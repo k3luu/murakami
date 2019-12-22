@@ -41,7 +41,7 @@ const ProposalPage = () => {
             id
             name
             childImageSharp {
-              fluid(maxWidth: 600) {
+              fluid(maxWidth: 6000) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -50,8 +50,6 @@ const ProposalPage = () => {
       }
     }
   `)
-
-  console.log("OUR STPRY", photo)
 
   return (
     <Layout>
@@ -84,7 +82,7 @@ const ProposalPage = () => {
         <emotionStyles.Text>
           He wanted to tell the story visually:
         </emotionStyles.Text>
-        <MyCarousel data={photo.howHeAsked.edges} showStatus showArrows />
+        <MyCarousel data={photo.howHeAsked.edges} showArrows />
       </emotionStyles.Section>
 
       <emotionStyles.Section>

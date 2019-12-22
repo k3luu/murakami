@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import SwipeableViews from "react-swipeable-views"
-import { bindKeyboard } from "react-swipeable-views-utils"
-import Button from "@material-ui/core/Button"
+import { autoPlay, bindKeyboard } from "react-swipeable-views-utils"
+import IconButton from "@material-ui/core/IconButton"
 import { ChevronLeft, ChevronRight } from "@material-ui/icons"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
@@ -22,29 +22,15 @@ class MyCarousel extends Component {
     super(p)
 
     this.state = {
-      carouselFullscreen: false,
       currIndex: 0,
       xDown: null,
       yDown: null,
     }
-
-    this.toggleFullscreen = this.toggleFullscreen.bind(this)
-    this.handleChangeIndex = this.handleChangeIndex.bind(this)
-    this.decrementCarouselIndex = this.decrementCarouselIndex.bind(this)
-    this.incrementCarouselIndex = this.incrementCarouselIndex.bind(this)
-    this.centerThumbnail = this.centerThumbnail.bind(this)
-    this.handleSwipe = this.handleSwipe.bind(this)
-    this.handleTouchStart = this.handleTouchStart.bind(this)
   }
 
   componentWillUpdate(nextProps, nextState) {
-    if (nextState.carouselFullscreen) {
-      document.body.style.overflow = "hidden"
-      document.body.scroll = "no"
-    } else {
-      document.body.style.overflow = "initial"
-      document.body.scroll = "yes"
-    }
+    document.body.style.overflow = "initial"
+    document.body.scroll = "yes"
   }
 
   componentDidMount() {
@@ -57,14 +43,14 @@ class MyCarousel extends Component {
     document.removeEventListener("touchmove", this.handleSwipe, true)
   }
 
-  handleTouchStart(evt) {
+  handleTouchStart = evt => {
     const xDown = getTouches(evt)[0].clientX
     const yDown = getTouches(evt)[0].clientY
 
     this.setState({ xDown, yDown })
   }
 
-  handleSwipe(evt) {
+  handleSwipe = evt => {
     const { xDown, yDown } = this.state
 
     if (!xDown || !yDown) {
@@ -79,7 +65,6 @@ class MyCarousel extends Component {
 
     if (Math.abs(xDiff) > Math.abs(yDiff)) {
       /*most significant*/
-      // this.centerThumbnail()
       if (xDiff > 0) {
         /* left swipe */
       } else {
@@ -96,33 +81,11 @@ class MyCarousel extends Component {
     this.setState({ xDown: null, yDown: null })
   }
 
-  centerThumbnail() {
-    const stepperThumbContainer = document.getElementById(
-      "stepperThumbContainer"
-    )
-    const stepperCurrThumb = document.getElementById("stepperCurrThumb")
-
-    const containerWidth = stepperThumbContainer.clientWidth
-    const targetWidth = stepperCurrThumb.clientWidth + 10
-
-    if (stepperThumbContainer) {
-      const leftScreenOffset = (containerWidth - targetWidth) / 2
-      const leftSiblingOffset = targetWidth * this.state.currIndex
-      const scrollValue = leftSiblingOffset - leftScreenOffset
-
-      stepperThumbContainer.scrollLeft = Math.max(0, scrollValue)
-    }
-  }
-
-  toggleFullscreen() {
-    this.setState({ carouselFullscreen: !this.state.carouselFullscreen })
-  }
-
-  handleChangeIndex(currIndex) {
+  handleChangeIndex = currIndex => {
     this.setState({ currIndex })
   }
 
-  decrementCarouselIndex() {
+  decrementCarouselIndex = () => {
     let newIndex = this.state.currIndex - 1
 
     if (newIndex < 0) {
@@ -130,10 +93,9 @@ class MyCarousel extends Component {
     }
 
     this.setState({ currIndex: newIndex })
-    // this.centerThumbnail()
   }
 
-  incrementCarouselIndex() {
+  incrementCarouselIndex = () => {
     let newIndex = this.state.currIndex + 1
 
     if (newIndex > this.props.data.length - 1) {
@@ -141,7 +103,6 @@ class MyCarousel extends Component {
     }
 
     this.setState({ currIndex: newIndex })
-    // this.centerThumbnail()
   }
 
   render() {
@@ -160,6 +121,7 @@ class MyCarousel extends Component {
               fluid={elem.node.childImageSharp.fluid}
               key={elem.node.id}
               alt={elem.node.name.replace(/-/g, " ").substring(2)}
+              imgStyle={{ objectFit: "contain" }}
             />
           ))}
         </EnhancedSwipeableViews>
@@ -170,36 +132,27 @@ class MyCarousel extends Component {
           }`}</div>
         )}
 
-        {showArrows && (
-          <div className="mycarousel__arrow-container">
-            <div className="mycarousel__arrow-left">
-              <Button
-                variant="fab"
-                mini
-                aria-label="left-arrow"
-                onClick={this.decrementCarouselIndex}
-              >
-                <ChevronLeft />
-              </Button>
-            </div>
-            <div className="mycarousel__arrow-right">
-              <Button
-                variant="fab"
-                mini
-                aria-label="right-arrow"
-                onClick={this.incrementCarouselIndex}
-              >
-                <ChevronRight />
-              </Button>
-            </div>
-          </div>
-        )}
+        <div className="mycarousel__arrow-container">
+          <IconButton
+            aria-label="left-arrow"
+            onClick={this.decrementCarouselIndex}
+          >
+            <ChevronLeft />
+          </IconButton>
 
-        <CarouselStepper
-          dots={data.length}
-          index={currIndex}
-          onChangeIndex={this.handleChangeIndex}
-        />
+          <CarouselStepper
+            dots={data.length}
+            index={currIndex}
+            onChangeIndex={this.handleChangeIndex}
+          />
+
+          <IconButton
+            aria-label="right-arrow"
+            onClick={this.incrementCarouselIndex}
+          >
+            <ChevronRight />
+          </IconButton>
+        </div>
       </div>
     )
   }
