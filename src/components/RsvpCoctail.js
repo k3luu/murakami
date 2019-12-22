@@ -78,8 +78,6 @@ const RsvpForm = props => {
     setGuestAdded(event.target.value)
   }
 
-  console.log(guestAdded)
-
   return (
     <>
       <Title>Cocktail Reception</Title>
@@ -155,6 +153,7 @@ const RsvpForm = props => {
         </HiddenSection> */}
 
         <Button
+          type="submit"
           variant="contained"
           color="primary"
           classes={{ containedPrimary: classes.button }}
