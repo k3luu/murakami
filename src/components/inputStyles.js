@@ -57,7 +57,7 @@ export const InputContainer = styled.div`
   }
 
   fieldset.active {
-    border: 2px solid #3f51b5;
+    border: 2px solid #74a3b7;
   }
 
   fieldset.error {

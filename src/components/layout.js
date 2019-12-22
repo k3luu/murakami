@@ -28,7 +28,8 @@ const Main = styled.main`
 
   &.schedule,
   &.faq,
-  &.travel {
+  &.travel,
+  &.rsvp {
     display: flex;
     margin-top: 90px;
 
