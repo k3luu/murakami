@@ -71,11 +71,25 @@ const styles = () => ({
 })
 
 const RsvpForm = props => {
+  const [firstNameVal, setFirstName] = useState(false)
+  const [lastNameVal, setLastName] = useState(false)
   const [guestAdded, setGuestAdded] = useState(false)
+
   const { classes } = props
 
-  function handleChange(event) {
-    setGuestAdded(event.target.value)
+  function handleFirstNameChange(event) {
+    const value = event.target.value
+    setFirstName(value !== "")
+  }
+
+  function handleLastNameChange(event) {
+    const value = event.target.value
+    setLastName(value !== "")
+  }
+
+  function handleGuestChange(event) {
+    const value = event.target.value
+    setGuestAdded(value !== "")
   }
 
   return (
@@ -101,12 +115,14 @@ const RsvpForm = props => {
             id="first_name"
             name="First Name"
             placeholder="First Name"
+            onChange={handleFirstNameChange}
           />
           <TextInput
             label="Last Name"
             id="last_name"
             name="first_name"
             placeholder="Last Name"
+            onChange={handleLastNameChange}
           />
         </FormSection>
 
@@ -116,9 +132,9 @@ const RsvpForm = props => {
             type="number"
             id="guests"
             name="guests"
-            placeholder="guests"
             min="1"
             max="9"
+            onChange={handleGuestChange}
           />
         </FormSection>
 
@@ -161,6 +177,7 @@ const RsvpForm = props => {
           variant="contained"
           color="primary"
           classes={{ containedPrimary: classes.button }}
+          disabled={!firstNameVal || !lastNameVal || !guestAdded}
         >
           Submit
         </Button>
