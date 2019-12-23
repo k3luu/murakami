@@ -117,7 +117,12 @@ const TravelPage = () => {
                 venue.
               </p>
               <div>
-                https://www.marriott.com/event-reservations/reservation-link.mi?id=1576001826620&key=GRP&app=resvlink
+                <a
+                  href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1576001826620&key=GRP&app=resvlink"
+                  target="_blank"
+                >
+                  https://www.marriott.com/event-reservations/reservation-link.mi?id=1576001826620&key=GRP&app=resvlink
+                </a>
               </div>
             </li>
             <li>
@@ -130,7 +135,12 @@ const TravelPage = () => {
                 group. The hotel is about 20-30 min drive to the wedding venue.
               </p>
               <div>
-                https://www.marriott.com/event-reservations/reservation-link.mi?id=1576607783144&key=GRP&app=resvlink
+                <a
+                  href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1576607783144&key=GRP&app=resvlink"
+                  target="_blank"
+                >
+                  https://www.marriott.com/event-reservations/reservation-link.mi?id=1576607783144&key=GRP&app=resvlink
+                </a>
               </div>
             </li>
             <li>
@@ -265,10 +275,9 @@ const TravelPage = () => {
               view over Napa Valley. Stay for the delicious breakfast.
             </li>
             <li>
-              <u>Murakami Recommended</u>: Boon Fly Cafe - local diner breakfast
-              that is popular among locals, Oxbow Market - take a break from
-              eating and drinking to come to a market full of eating and
-              drinking.
+              Murakami Recommended: Boon Fly Cafe - local diner breakfast that
+              is popular among locals, Oxbow Market - take a break from eating
+              and drinking to come to a market full of eating and drinking.
             </li>
           </ul>
           <h5>Wineries in Sonoma/Napa Valley</h5>

@@ -141,7 +141,8 @@ const SchedulePage = () => {
           <DateSubtitle>
             <Weekday>Saturday</Weekday>
             <Note>
-              The wedding ceremony will begin at 5pm at Sonoma Winery located at{" "}
+              The wedding ceremony will begin at 5pm at Viansa Sonoma Winery
+              located at{" "}
               <a
                 href="http://maps.google.com/maps?q=25200 Arnold Dr, Sonoma, CA 95476"
                 target="_blank"
