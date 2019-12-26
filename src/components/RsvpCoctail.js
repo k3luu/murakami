@@ -95,7 +95,7 @@ const RsvpForm = props => {
   return (
     <>
       <Title>Cocktail Reception</Title>
-      <Date>Friday, September 19th</Date>
+      <Date>Friday, September 18th</Date>
 
       <Form
         name="cocktail-rsvp"
