@@ -48,6 +48,7 @@ const Main = styled.main`
       @media (max-width: 1023px) {
         width: 100vw;
         min-width: unset;
+        max-width: unset;
         max-height: 70vh;
         height: 100%;
         min-height: unset;
