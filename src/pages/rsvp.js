@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"

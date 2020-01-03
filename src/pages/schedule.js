@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -131,7 +132,7 @@ const SchedulePage = () => {
               We'll be hosting a cocktail reception for guests who are arriving
               in Sonoma early. This is an optional event so don't feel obliged
               but we're happy to have you join in. Please RSVP{" "}
-              <Link to="/rsvp">here</Link>.
+              <OutboundLink to="/rsvp">here</OutboundLink>.
             </Note>
           </Event>
         </Day>
@@ -179,7 +180,7 @@ const SchedulePage = () => {
             <Note>
               There will be no hosted events on Sunday. We will leave it to you
               to make the most of the weekend in Sonoma. Check out our
-              recommendations on the <Link to="/travel">Travel page</Link>.
+              recommendations on the <OutboundLink to="/travel">Travel page</OutboundLink>.
             </Note>
           </DateSubtitle>
         </DateTitle>
