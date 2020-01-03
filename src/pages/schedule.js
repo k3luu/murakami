@@ -132,7 +132,7 @@ const SchedulePage = () => {
               We'll be hosting a cocktail reception for guests who are arriving
               in Sonoma early. This is an optional event so don't feel obliged
               but we're happy to have you join in. Please RSVP{" "}
-              <OutboundLink to="/rsvp">here</OutboundLink>.
+              <OutboundLink href="/rsvp">here</OutboundLink>.
             </Note>
           </Event>
         </Day>
@@ -150,7 +150,7 @@ const SchedulePage = () => {
               >
                 25200 Arnold Dr, Sonoma, CA 95476
               </a>
-              . Reception to follow.
+              . Reception href follow.
             </Note>
           </DateSubtitle>
         </DateTitle>
@@ -180,7 +180,7 @@ const SchedulePage = () => {
             <Note>
               There will be no hosted events on Sunday. We will leave it to you
               to make the most of the weekend in Sonoma. Check out our
-              recommendations on the <OutboundLink to="/travel">Travel page</OutboundLink>.
+              recommendations on the <OutboundLink href="/travel">Travel page</OutboundLink>.
             </Note>
           </DateSubtitle>
         </DateTitle>

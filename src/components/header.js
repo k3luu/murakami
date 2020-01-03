@@ -172,34 +172,34 @@ const Header = ({ siteTitle }) => {
   return (
     <HeaderContainer>
       <SiteName>
-        <OutboundLink to="/">{siteTitle}</OutboundLink>
+        <OutboundLink href="/">{siteTitle}</OutboundLink>
       </SiteName>
       <Navigation>
-        <OutboundLink to="/" className={handleActiveTab("/")}>
+        <OutboundLink href="/" className={handleActiveTab("/")}>
           Home
         </OutboundLink>
-        <OutboundLink to="/our-story" className={handleActiveTab("/our-story")}>
+        <OutboundLink href="/our-story" className={handleActiveTab("/our-story")}>
           Our Story
         </OutboundLink>
-        <OutboundLink to="/schedule" className={handleActiveTab("/schedule")}>
+        <OutboundLink href="/schedule" className={handleActiveTab("/schedule")}>
           Schedule
         </OutboundLink>
-        <OutboundLink to="/travel" className={handleActiveTab("/travel")}>
+        <OutboundLink href="/travel" className={handleActiveTab("/travel")}>
           Travel
         </OutboundLink>
-        <OutboundLink to="/faq" className={handleActiveTab("/faq")}>
+        <OutboundLink href="/faq" className={handleActiveTab("/faq")}>
           FAQ
         </OutboundLink>
-        {/* <OutboundLink to="/wedding-party" className={handleActiveTab("/wedding-party")}>
+        {/* <OutboundLink href="/wedding-party" className={handleActiveTab("/wedding-party")}>
           Wedding Party
         </OutboundLink>
-        <OutboundLink to="/registry" className={handleActiveTab("/registry")}>
+        <OutboundLink href="/registry" className={handleActiveTab("/registry")}>
           Registry
         </OutboundLink> */}
-        <OutboundLink to="/rsvp" className={handleActiveTab("/rsvp")}>
+        <OutboundLink href="/rsvp" className={handleActiveTab("/rsvp")}>
           RSVP
         </OutboundLink>
-        <OutboundLink to="/photos" className={handleActiveTab("/photos")}>
+        <OutboundLink href="/photos" className={handleActiveTab("/photos")}>
           Photos
         </OutboundLink>
       </Navigation>
@@ -233,34 +233,34 @@ const Header = ({ siteTitle }) => {
           <MobileNav>
             <MobileNavTitle>{siteTitle}</MobileNavTitle>
 
-            <OutboundLink to="/" className={handleActiveTab("/")}>
+            <OutboundLink href="/" className={handleActiveTab("/")}>
               Home
             </OutboundLink>
-            <OutboundLink to="/our-story" className={handleActiveTab("/our-story")}>
+            <OutboundLink href="/our-story" className={handleActiveTab("/our-story")}>
               Our Story
             </OutboundLink>
-            <OutboundLink to="/schedule" className={handleActiveTab("/schedule")}>
+            <OutboundLink href="/schedule" className={handleActiveTab("/schedule")}>
               Schedule
             </OutboundLink>
-            <OutboundLink to="/travel" className={handleActiveTab("/travel")}>
+            <OutboundLink href="/travel" className={handleActiveTab("/travel")}>
               Travel
             </OutboundLink>
-            <OutboundLink to="/faq" className={handleActiveTab("/faq")}>
+            <OutboundLink href="/faq" className={handleActiveTab("/faq")}>
               FAQ
             </OutboundLink>
             {/* <OutboundLink
-              to="/wedding-party"
+              href="/wedding-party"
               className={handleActiveTab("/wedding-party")}
             >
               Wedding Party
           </OutboundLink>
-            <OutboundLink to="/registry" className={handleActiveTab("/registry")}>
+            <OutboundLink href="/registry" className={handleActiveTab("/registry")}>
               Registry
           </OutboundLink> */}
-            <OutboundLink to="/rsvp" className={handleActiveTab("/rsvp")}>
+            <OutboundLink href="/rsvp" className={handleActiveTab("/rsvp")}>
               RSVP
             </OutboundLink>
-            <OutboundLink to="/photos" className={handleActiveTab("/photos")}>
+            <OutboundLink href="/photos" className={handleActiveTab("/photos")}>
               Photos
             </OutboundLink>
           </MobileNav>
