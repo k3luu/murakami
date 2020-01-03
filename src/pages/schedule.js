@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -132,7 +131,7 @@ const SchedulePage = () => {
               We'll be hosting a cocktail reception for guests who are arriving
               in Sonoma early. This is an optional event so don't feel obliged
               but we're happy to have you join in. Please RSVP{" "}
-              <OutboundLink href="/rsvp">here</OutboundLink>.
+              <Link to="/rsvp">here</Link>.
             </Note>
           </Event>
         </Day>
@@ -150,7 +149,7 @@ const SchedulePage = () => {
               >
                 25200 Arnold Dr, Sonoma, CA 95476
               </a>
-              . Reception href follow.
+              . Reception to follow.
             </Note>
           </DateSubtitle>
         </DateTitle>
@@ -180,7 +179,7 @@ const SchedulePage = () => {
             <Note>
               There will be no hosted events on Sunday. We will leave it to you
               to make the most of the weekend in Sonoma. Check out our
-              recommendations on the <OutboundLink href="/travel">Travel page</OutboundLink>.
+              recommendations on the <Link to="/travel">Travel page</Link>.
             </Note>
           </DateSubtitle>
         </DateTitle>

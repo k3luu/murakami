@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
 import Drawer from "@material-ui/core/Drawer"
@@ -172,36 +172,36 @@ const Header = ({ siteTitle }) => {
   return (
     <HeaderContainer>
       <SiteName>
-        <OutboundLink href="/">{siteTitle}</OutboundLink>
+        <Link to="/">{siteTitle}</Link>
       </SiteName>
       <Navigation>
-        <OutboundLink href="/" className={handleActiveTab("/")}>
+        <Link to="/" className={handleActiveTab("/")}>
           Home
-        </OutboundLink>
-        <OutboundLink href="/our-story" className={handleActiveTab("/our-story")}>
+        </Link>
+        <Link to="/our-story" className={handleActiveTab("/our-story")}>
           Our Story
-        </OutboundLink>
-        <OutboundLink href="/schedule" className={handleActiveTab("/schedule")}>
+        </Link>
+        <Link to="/schedule" className={handleActiveTab("/schedule")}>
           Schedule
-        </OutboundLink>
-        <OutboundLink href="/travel" className={handleActiveTab("/travel")}>
+        </Link>
+        <Link to="/travel" className={handleActiveTab("/travel")}>
           Travel
-        </OutboundLink>
-        <OutboundLink href="/faq" className={handleActiveTab("/faq")}>
+        </Link>
+        <Link to="/faq" className={handleActiveTab("/faq")}>
           FAQ
-        </OutboundLink>
-        {/* <OutboundLink href="/wedding-party" className={handleActiveTab("/wedding-party")}>
+        </Link>
+        {/* <Link to="/wedding-party" className={handleActiveTab("/wedding-party")}>
           Wedding Party
-        </OutboundLink>
-        <OutboundLink href="/registry" className={handleActiveTab("/registry")}>
+        </Link>
+        <Link to="/registry" className={handleActiveTab("/registry")}>
           Registry
-        </OutboundLink> */}
-        <OutboundLink href="/rsvp" className={handleActiveTab("/rsvp")}>
+        </Link> */}
+        <Link to="/rsvp" className={handleActiveTab("/rsvp")}>
           RSVP
-        </OutboundLink>
-        <OutboundLink href="/photos" className={handleActiveTab("/photos")}>
+        </Link>
+        <Link to="/photos" className={handleActiveTab("/photos")}>
           Photos
-        </OutboundLink>
+        </Link>
       </Navigation>
 
       <MobileMenu>
@@ -233,36 +233,36 @@ const Header = ({ siteTitle }) => {
           <MobileNav>
             <MobileNavTitle>{siteTitle}</MobileNavTitle>
 
-            <OutboundLink href="/" className={handleActiveTab("/")}>
+            <Link to="/" className={handleActiveTab("/")}>
               Home
-            </OutboundLink>
-            <OutboundLink href="/our-story" className={handleActiveTab("/our-story")}>
+            </Link>
+            <Link to="/our-story" className={handleActiveTab("/our-story")}>
               Our Story
-            </OutboundLink>
-            <OutboundLink href="/schedule" className={handleActiveTab("/schedule")}>
+            </Link>
+            <Link to="/schedule" className={handleActiveTab("/schedule")}>
               Schedule
-            </OutboundLink>
-            <OutboundLink href="/travel" className={handleActiveTab("/travel")}>
+            </Link>
+            <Link to="/travel" className={handleActiveTab("/travel")}>
               Travel
-            </OutboundLink>
-            <OutboundLink href="/faq" className={handleActiveTab("/faq")}>
+            </Link>
+            <Link to="/faq" className={handleActiveTab("/faq")}>
               FAQ
-            </OutboundLink>
-            {/* <OutboundLink
-              href="/wedding-party"
+            </Link>
+            {/* <Link
+              to="/wedding-party"
               className={handleActiveTab("/wedding-party")}
             >
               Wedding Party
-          </OutboundLink>
-            <OutboundLink href="/registry" className={handleActiveTab("/registry")}>
+          </Link>
+            <Link to="/registry" className={handleActiveTab("/registry")}>
               Registry
-          </OutboundLink> */}
-            <OutboundLink href="/rsvp" className={handleActiveTab("/rsvp")}>
+          </Link> */}
+            <Link to="/rsvp" className={handleActiveTab("/rsvp")}>
               RSVP
-            </OutboundLink>
-            <OutboundLink href="/photos" className={handleActiveTab("/photos")}>
+            </Link>
+            <Link to="/photos" className={handleActiveTab("/photos")}>
               Photos
-            </OutboundLink>
+            </Link>
           </MobileNav>
         </Drawer>
       </MobileMenu>
