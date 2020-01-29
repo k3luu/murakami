@@ -89,6 +89,9 @@ const TravelPage = () => {
             Whether you're local or flying in to one of the bigger airports,
             getting to Sonoma is probably best by car.
           </p>
+          <p>
+            If you'd like to rent a car, you can get a discount by booking through this <a href="https://www.avis.com/content/dam/avis/na/us/common/bridge/meetings/weddings.html?AWD=E779930&amp;NAME=Luu-Murakami+Wedding&amp;FDATE=09182020&amp;TDATE=09202020&amp;LOCATION2=&amp;LOCATION1=San+Francisco,+CA&amp;ARCIATA=&amp;EVENT=0&amp;AA=0" target="_blank">Avis Rental Car link</a> with a unique discount code for our wedding. The discount is valid for the seven days preceding and following the wedding.
+          </p>
           <br />
           <h5>Getting around in Sonoma</h5>
           <p>
