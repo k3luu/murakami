@@ -78,8 +78,6 @@ const Layout = ({ children }) => {
       : ""
   }
 
-  console.log(handleClassName())
-
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />

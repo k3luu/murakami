@@ -7,6 +7,7 @@ import DriveEtaRoundedIcon from "@material-ui/icons/DriveEtaRounded"
 import HotelRoundedIcon from "@material-ui/icons/HotelRounded"
 import LocationCityRoundedIcon from "@material-ui/icons/LocationCityRounded"
 import StarBorderRoundedIcon from "@material-ui/icons/StarBorderRounded"
+import HashLinkObserver from "react-hash-link"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -47,9 +48,21 @@ const TravelPage = () => {
         className="page__image"
         fluid={photo.pagePhoto.childImageSharp.fluid}
       />
+      <HashLinkObserver />
+
       <emotionStyles.pageContainer>
         <h1>Travel</h1>
-        <Card>
+
+        <ol className="travel__nav">
+          <li>
+            <a href="#air-travel">Air Travel</a>
+          </li>
+          <li>
+            <a href="#recommendations">Recommendations</a>
+          </li>
+        </ol>
+
+        <Card id="#air-travel">
           <h2>
             <FlightRoundedIcon />
             Air Travel
@@ -90,7 +103,16 @@ const TravelPage = () => {
             getting to Sonoma is probably best by car.
           </p>
           <p>
-            If you'd like to rent a car, you can get a discount by booking through this <a href="https://www.avis.com/content/dam/avis/na/us/common/bridge/meetings/weddings.html?AWD=E779930&amp;NAME=Luu-Murakami+Wedding&amp;FDATE=09182020&amp;TDATE=09202020&amp;LOCATION2=&amp;LOCATION1=San+Francisco,+CA&amp;ARCIATA=&amp;EVENT=0&amp;AA=0" target="_blank">Avis Rental Car link</a> with a unique discount code for our wedding. The discount is valid for the seven days preceding and following the wedding.
+            If you'd like to rent a car, you can get a discount by booking
+            through this{" "}
+            <a
+              href="https://www.avis.com/content/dam/avis/na/us/common/bridge/meetings/weddings.html?AWD=E779930&amp;NAME=Luu-Murakami+Wedding&amp;FDATE=09182020&amp;TDATE=09202020&amp;LOCATION2=&amp;LOCATION1=San+Francisco,+CA&amp;ARCIATA=&amp;EVENT=0&amp;AA=0"
+              target="_blank"
+            >
+              Avis Rental Car link
+            </a>{" "}
+            with a unique discount code for our wedding. The discount is valid
+            for the seven days preceding and following the wedding.
           </p>
           <br />
           <h5>Getting around in Sonoma</h5>
@@ -193,7 +215,7 @@ const TravelPage = () => {
           </p>
         </Card>
         <Card>
-          <h2>
+          <h2 id="#recommendations">
             <StarBorderRoundedIcon />
             Recommendations
           </h2>
