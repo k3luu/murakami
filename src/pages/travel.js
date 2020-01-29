@@ -7,7 +7,7 @@ import DriveEtaRoundedIcon from "@material-ui/icons/DriveEtaRounded"
 import HotelRoundedIcon from "@material-ui/icons/HotelRounded"
 import LocationCityRoundedIcon from "@material-ui/icons/LocationCityRounded"
 import StarBorderRoundedIcon from "@material-ui/icons/StarBorderRounded"
-import HashLinkObserver from "react-hash-link"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -16,15 +16,24 @@ import * as emotionStyles from "../styles/emotionStyles"
 const Card = styled.div`
   width: 100%;
   max-width: 700px;
+  padding: 20px 0;
   margin: 50px 0;
 
   @media (max-width: 767px) {
-    padding: 30px 0;
+    padding: 60px 0;
     margin: 0;
   }
 
   h2 > svg {
     margin: -2px 10px -2px 0;
+  }
+`
+
+const TravelNav = styled.ol`
+  margin: 0 40px;
+
+  li {
+    list-style-type: upper-roman;
   }
 `
 
@@ -48,21 +57,29 @@ const TravelPage = () => {
         className="page__image"
         fluid={photo.pagePhoto.childImageSharp.fluid}
       />
-      <HashLinkObserver />
 
       <emotionStyles.pageContainer>
         <h1>Travel</h1>
 
-        <ol className="travel__nav">
+        <TravelNav>
           <li>
-            <a href="#air-travel">Air Travel</a>
+            <a onClick={() => scrollTo("#air-travel")}>Air Travel</a>
           </li>
           <li>
-            <a href="#recommendations">Recommendations</a>
+            <a onClick={() => scrollTo("#transport")}>Transport</a>
           </li>
-        </ol>
+          <li>
+            <a onClick={() => scrollTo("#hotels")}>Hotels/Lodging</a>
+          </li>
+          <li>
+            <a onClick={() => scrollTo("#venue")}>Venue</a>
+          </li>
+          <li>
+            <a onClick={() => scrollTo("#recs")}>Recommendations</a>
+          </li>
+        </TravelNav>
 
-        <Card id="#air-travel">
+        <Card id="air-travel">
           <h2>
             <FlightRoundedIcon />
             Air Travel
@@ -92,7 +109,7 @@ const TravelPage = () => {
             your flights and driving time accordingly.
           </p>
         </Card>
-        <Card>
+        <Card id="transport">
           <h2>
             <DriveEtaRoundedIcon />
             Transport
@@ -122,7 +139,7 @@ const TravelPage = () => {
             accordingly if you're taking one to the wedding.
           </p>
         </Card>
-        <Card>
+        <Card id="hotels">
           <h2>
             <HotelRoundedIcon />
             Hotels / Lodging
@@ -183,7 +200,7 @@ const TravelPage = () => {
             time of year, so get a group together and book a house early!
           </p>
         </Card>
-        <Card>
+        <Card id="venue">
           <h2>
             <LocationCityRoundedIcon />
             Getting to the Venue
@@ -214,8 +231,8 @@ const TravelPage = () => {
             highly recommend those imbibing to take an Uber.
           </p>
         </Card>
-        <Card>
-          <h2 id="#recommendations">
+        <Card id="recs">
+          <h2>
             <StarBorderRoundedIcon />
             Recommendations
           </h2>
