@@ -40,12 +40,10 @@ const MenuFab = withStyles({
 const Card = styled.div`
   width: 100%;
   max-width: 700px;
-  padding: 20px 0;
-  margin: 50px 0;
+  padding: 100px 0;
 
   @media (max-width: 767px) {
     padding: 60px 0;
-    margin: 0;
   }
 
   h2 > svg {
