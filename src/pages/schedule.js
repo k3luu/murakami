@@ -100,7 +100,7 @@ const SchedulePage = () => {
   `)
 
   return (
-    <Layout>
+    <Layout className="schedule">
       <SEO title="Schedule" />
       <Img
         className="page__image"

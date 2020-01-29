@@ -46,8 +46,6 @@ export const TextPhotoSection = styled.div`
 `
 
 export const pageContainer = styled.div`
-  // max-height: calc(100vh - 90px);
-  // height: calc(100vh - 90px);
   overflow: auto;
   padding: 20px;
   flex-grow: 1;

@@ -22,7 +22,7 @@ const ProposalPage = () => {
   `)
 
   return (
-    <Layout>
+    <Layout className="rsvp">
       <SEO title="RSVP" />
       <Img
         className="page__image"

@@ -105,7 +105,7 @@ const TravelPage = () => {
   `)
 
   return (
-    <Layout>
+    <Layout className="travel">
       <SEO title="Travel" />
       <Img
         className="page__image"

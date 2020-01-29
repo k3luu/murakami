@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import Gallery from "../components/Gallery"
 
 const PhotoPage = () => (
-  <Layout>
+  <Layout className="photos">
     <SEO title="Photo Gallery" />
     <h1>Photos</h1>
     <Gallery />

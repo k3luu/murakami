@@ -59,7 +59,7 @@ const Main = styled.main`
   }
 `
 
-const Layout = ({ children }) => {
+const Layout = ({ children, className }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -70,20 +70,10 @@ const Layout = ({ children }) => {
     }
   `)
 
-  function handleClassName() {
-    if (typeof window === "object" && window.location.pathname === "/") {
-      return "home"
-    }
-
-    return typeof window === "object"
-      ? window.location.pathname.split("/")[1]
-      : ""
-  }
-
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Main className={handleClassName()}>{children}</Main>
+      <Main className={className}>{children}</Main>
     </>
   )
 }

@@ -42,7 +42,7 @@ const FaqPage = () => {
   `)
 
   return (
-    <Layout>
+    <Layout className="faq">
       <SEO title="Frequently Asked Questions" />
       <Img
         className="page__image"
