@@ -39,6 +39,7 @@ const Main = styled.main`
     }
 
     .page__image {
+      position: fixed !important;
       width: 40%;
       min-width: 500px;
       max-width: 500px;
@@ -46,6 +47,7 @@ const Main = styled.main`
       min-height: calc(100vh - 90px);
 
       @media (max-width: 1023px) {
+        position: relative !important;
         width: 100vw;
         min-width: unset;
         max-width: unset;

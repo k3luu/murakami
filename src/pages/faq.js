@@ -112,7 +112,10 @@ const FaqPage = () => {
           </li>
           <li>
             <div>I am coming from out of town. Where should I stay?</div>
-            <p>Check our the travel page for more information on lodging.</p>
+            <p>
+              Check our the <Link to="/travel">Travel page</Link> for more
+              information on lodging.
+            </p>
           </li>
           <li>
             <div>What if we can't make it to Sonoma?</div>
@@ -126,10 +129,10 @@ const FaqPage = () => {
               Will there be any activities happening that I need to know about?
             </div>
             <p>
-              Check out the Schedule page for details on the weekend's
-              festivities. We also have some recommendations for you if you plan
-              on getting to Sonoma early or are staying late under the Travel
-              page.
+              Check out the <Link to="/schedule">Schedule page</Link> for
+              details on the weekend's festivities. We also have some
+              recommendations for you if you plan on getting to Sonoma early or
+              are staying late under the <Link to="/travel">Travel page</Link>.
             </p>
           </li>
           <li>
@@ -163,7 +166,8 @@ const FaqPage = () => {
               Ultimately, we're going with #Marriedkami so please tag us in so
               we can track all the memories!
               <br />
-              Check out the Photos page for your tagged photos!
+              Check out the <Link to="/photos">Photos page</Link> for your
+              tagged photos!
             </p>
           </li>
           <li>

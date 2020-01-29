@@ -46,14 +46,16 @@ export const TextPhotoSection = styled.div`
 `
 
 export const pageContainer = styled.div`
-  max-height: calc(100vh - 90px);
-  height: calc(100vh - 90px);
+  // max-height: calc(100vh - 90px);
+  // height: calc(100vh - 90px);
   overflow: auto;
   padding: 20px;
   flex-grow: 1;
+  margin-left: 500px;
 
   @media (max-width: 1023px) {
     max-height: unset;
     height: unset;
+    margin-left: unset;
   }
 `

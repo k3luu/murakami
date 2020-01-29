@@ -1,17 +1,41 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import scrollTo from "gatsby-plugin-smoothscroll"
+import Fab from "@material-ui/core/Fab"
+import Menu from "@material-ui/core/Menu"
+import MenuItem from "@material-ui/core/MenuItem"
+import FormatListBulletedIcon from "@material-ui/icons/FormatListBulleted"
 import FlightRoundedIcon from "@material-ui/icons/FlightRounded"
 import DriveEtaRoundedIcon from "@material-ui/icons/DriveEtaRounded"
 import HotelRoundedIcon from "@material-ui/icons/HotelRounded"
 import LocationCityRoundedIcon from "@material-ui/icons/LocationCityRounded"
 import StarBorderRoundedIcon from "@material-ui/icons/StarBorderRounded"
-import scrollTo from "gatsby-plugin-smoothscroll"
+import { withStyles } from "@material-ui/core/styles"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import * as emotionStyles from "../styles/emotionStyles"
+import * as palette from "../styles/palette"
+
+const MenuFab = withStyles({
+  root: {
+    backgroundColor: "rgba(255,255,255)",
+    boxShadow:
+      "0px -1px 1px -1px rgba(0,0,0,0.2), 1px 1px 14px 0px rgba(0,0,0,0.14), -1px 2px 17px 0px rgba(0,0,0,0.12)",
+    position: "fixed",
+    bottom: 30,
+    right: 30,
+    transition:
+      "background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+    "&:hover": {
+      backgroundColor: "rgba(255,255,255)",
+      boxShadow:
+        "0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12)",
+    },
+  },
+})(Fab)
 
 const Card = styled.div`
   width: 100%;
@@ -37,7 +61,39 @@ const TravelNav = styled.ol`
   }
 `
 
+const isBrowser = typeof window !== `undefined`
+
 const TravelPage = () => {
+  const [anchorEl, setAnchorEl] = useState(null)
+  const [coordinates, setCoordinates] = useState({
+    x: isBrowser ? window.scrollX : 0,
+    y: isBrowser ? -window.scrollY : 0,
+    direction: "",
+  })
+
+  const listener = () => {
+    console.log("scrolling", coordinates)
+    const newScrollY = isBrowser ? -window.scrollY : 0
+    setCoordinates(prev => ({
+      x: isBrowser ? window.scrollX : 0,
+      y: newScrollY,
+      direction: prev.y > newScrollY ? "down" : "up",
+    }))
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", listener)
+    return () => window.removeEventListener("scroll", listener)
+  }, [coordinates])
+
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget)
+  }
+
+  const handleClose = () => {
+    setAnchorEl(null)
+  }
+
   const photo = useStaticQuery(graphql`
     query {
       pagePhoto: file(relativePath: { eq: "travel.jpg" }) {
@@ -343,6 +399,36 @@ const TravelPage = () => {
             </li>
           </ul>
         </Card>
+
+        <MenuFab
+          aria-controls="simple-menu"
+          aria-haspopup="true"
+          onClick={handleClick}
+          style={{ visibility: coordinates.y < -800 ? "visible" : "hidden" }}
+        >
+          <FormatListBulletedIcon style={{ color: palette.primaryColor }} />
+        </MenuFab>
+        <Menu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          <MenuItem onClick={() => scrollTo("#air-travel")}>
+            I. Air Travel
+          </MenuItem>
+          <MenuItem onClick={() => scrollTo("#transport")}>
+            II. Transport
+          </MenuItem>
+          <MenuItem onClick={() => scrollTo("#hotels")}>
+            III. Hotels/Lodging
+          </MenuItem>
+          <MenuItem onClick={() => scrollTo("#venue")}>IV. Venue</MenuItem>
+          <MenuItem onClick={() => scrollTo("#recs")}>
+            V. Recommendations
+          </MenuItem>
+        </Menu>
       </emotionStyles.pageContainer>
     </Layout>
   )
