@@ -117,16 +117,35 @@ const SchedulePage = () => {
         </DateTitle>
         <Day>
           <Event>
-            <div className="title">Wedding Rehearsal [Wedding Party only]</div>
-            <div className="time">5 PM - 6 PM</div>
+            <div className="title">Wedding Rehearsal [Bridal Party only]</div>
+            <div className="time">3 PM - 4 PM</div>
+            <Note>Viansa Sonoma Winery</Note>
           </Event>
           <Event>
-            <div className="title">Rehearsal Dinner [Wedding Party only]</div>
-            <div className="time">6 PM - 8 PM</div>
+            <div className="title">Rehearsal Dinner [Bridal Party only]</div>
+            <div className="time">5:30 PM - 7:30 PM</div>
+            <Note>
+              Sunflower Caffe -{" "}
+              <a
+                href="http://maps.google.com/maps?q=421 1st St W, Sonoma, CA 95476"
+                target="_blank"
+              >
+                421 1st St W, Sonoma, CA 95476
+              </a>
+            </Note>
           </Event>
           <Event>
-            <div className="title">Cocktail Reception [Everyone invited]</div>
-            <div className="time">8 PM - 10 PM</div>
+            <div className="title">Welcome Reception [Everyone invited]</div>
+            <div className="time">7:30 PM - 9:30 PM</div>
+            <Note>
+              Sunflower Caffe -{" "}
+              <a
+                href="http://maps.google.com/maps?q=421 1st St W, Sonoma, CA 95476"
+                target="_blank"
+              >
+                421 1st St W, Sonoma, CA 95476
+              </a>
+            </Note>
             <Note>
               We'll be hosting a cocktail reception for guests who are arriving
               in Sonoma early. This is an optional event so don't feel obliged
