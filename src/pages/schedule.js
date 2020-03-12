@@ -117,12 +117,12 @@ const SchedulePage = () => {
         </DateTitle>
         <Day>
           <Event>
-            <div className="title">Wedding Rehearsal [Bridal Party only]</div>
+            <div className="title">Wedding Rehearsal [Wedding Party only]</div>
             <div className="time">3 PM - 4 PM</div>
             <Note>Viansa Sonoma Winery</Note>
           </Event>
           <Event>
-            <div className="title">Rehearsal Dinner [Bridal Party only]</div>
+            <div className="title">Rehearsal Dinner [Wedding Party only]</div>
             <div className="time">5:30 PM - 7:30 PM</div>
             <Note>
               Sunflower Caffe -{" "}
