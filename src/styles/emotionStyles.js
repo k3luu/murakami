@@ -1,5 +1,5 @@
-import React from "react"
 import styled from "@emotion/styled"
+import * as palette from "./palette"
 
 export const Section = styled.div`
   padding-bottom: 50px;
@@ -8,6 +8,18 @@ export const Section = styled.div`
 
   @media (max-width: 1023px) {
     margin: 80px 20px;
+  }
+
+  &.home {
+    padding-top: 80px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .center {
+    text-align: center;
   }
 `
 
@@ -56,4 +68,11 @@ export const pageContainer = styled.div`
     height: unset;
     margin-left: unset;
   }
+`
+
+export const Linebreak = styled.div`
+  width: 60px;
+  height: 2px;
+  background: ${palette.primaryColor};
+  margin: 60px auto;
 `

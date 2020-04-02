@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
@@ -138,23 +138,6 @@ const Header = ({ siteTitle }) => {
     }
   }
 
-  const [windowSize, setWindowSize] = useState(getSize)
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowSize(getSize())
-    }
-
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
-
-  useEffect(() => {
-    if (windowSize.width < 1024) {
-      setDrawer(false)
-    }
-  }, [windowSize])
-
   function handleActiveTab(path) {
     const pathName = isClient ? window.location.pathname : ""
 
@@ -178,9 +161,6 @@ const Header = ({ siteTitle }) => {
         <Link to="/" className={handleActiveTab("/")}>
           Home
         </Link>
-        <Link to="/our-story" className={handleActiveTab("/our-story")}>
-          Our Story
-        </Link>
         <Link to="/schedule" className={handleActiveTab("/schedule")}>
           Schedule
         </Link>
@@ -192,10 +172,7 @@ const Header = ({ siteTitle }) => {
         </Link>
         {/* <Link to="/wedding-party" className={handleActiveTab("/wedding-party")}>
           Wedding Party
-        </Link>
-        <Link to="/registry" className={handleActiveTab("/registry")}>
-          Registry
-        </Link> */}
+        </Link>*/}
         <Link to="/rsvp" className={handleActiveTab("/rsvp")}>
           RSVP
         </Link>
@@ -236,9 +213,6 @@ const Header = ({ siteTitle }) => {
             <Link to="/" className={handleActiveTab("/")}>
               Home
             </Link>
-            <Link to="/our-story" className={handleActiveTab("/our-story")}>
-              Our Story
-            </Link>
             <Link to="/schedule" className={handleActiveTab("/schedule")}>
               Schedule
             </Link>
@@ -253,9 +227,6 @@ const Header = ({ siteTitle }) => {
               className={handleActiveTab("/wedding-party")}
             >
               Wedding Party
-          </Link>
-            <Link to="/registry" className={handleActiveTab("/registry")}>
-              Registry
           </Link> */}
             <Link to="/rsvp" className={handleActiveTab("/rsvp")}>
               RSVP
