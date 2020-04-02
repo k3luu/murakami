@@ -138,6 +138,7 @@ const IndexPage = () => {
           </div>
 
           <Img
+            style={{ maxHeight: 400 }}
             className="photo"
             fluid={photo.placeholderImage.childImageSharp.fluid}
           />
@@ -162,58 +163,51 @@ const IndexPage = () => {
       <emotionStyles.Section>
         <h1>Fun Facts</h1>
 
-        <ul>
-          <li>
-            <emotionStyles.TextPhotoSection>
-              <div>
-                <emotionStyles.Text>
-                  Our first date was at the California Academy of Sciences. This
-                  is exactly how the conversation went:
-                </emotionStyles.Text>
-                <emotionStyles.Text>
-                  Jenny: Do you like sharks? (with absolutely no context)
-                  <br />
-                  Tyler: Are you talking about Shark Week at the California
-                  Academy of Sciences?!
-                </emotionStyles.Text>
-                <emotionStyles.Text>
-                  It's scary how much we think alike, but it goes back to even
-                  the idea for our first date. And that's why this Jenga piece
-                  exists - Tyler's friends cheering him on for Shark Week.
-                </emotionStyles.Text>
-              </div>
+        <emotionStyles.TextPhotoSection>
+          <Img
+            imgStyle={{ objectFit: "contain" }}
+            className="photo first"
+            fluid={photo.jengaPhoto.childImageSharp.fluid}
+          />
 
-              <Img
-                imgStyle={{ objectFit: "contain" }}
-                className="photo"
-                fluid={photo.jengaPhoto.childImageSharp.fluid}
-              />
-            </emotionStyles.TextPhotoSection>
-          </li>
-          <li>
-            <emotionStyles.TextPhotoSection>
-              <emotionStyles.Text>
-                Our sisters live together! This is always a tidbit that confuses
-                everyone. They think we met through our sisters, but really they
-                met through us. We were nervous about it, but it's worked out
-                better than we expected. They even hosted the first dinner
-                gathering between the Luu's and the Murakami's (home-cooked meal
-                included).
-              </emotionStyles.Text>
-              <Img
-                className="photo"
-                fluid={photo.sistersPhoto.childImageSharp.fluid}
-              />
-            </emotionStyles.TextPhotoSection>
-          </li>
-          <li>
+          <div>
             <emotionStyles.Text>
-              Tyler has made Jenny a "punctual" person. Although showing up to a
-              movie an hour early sounds more "compulsive" than it does
-              "punctual".
+              Our first date was at the California Academy of Sciences. This is
+              exactly how the conversation went:
             </emotionStyles.Text>
-          </li>
-        </ul>
+            <emotionStyles.Text>
+              Jenny: Do you like sharks? (with absolutely no context)
+              <br />
+              Tyler: Are you talking about Shark Week at the California Academy
+              of Sciences?!
+            </emotionStyles.Text>
+            <emotionStyles.Text>
+              It's scary how much we think alike, but it goes back to even the
+              idea for our first date. And that's why this Jenga piece exists -
+              Tyler's friends cheering him on for Shark Week.
+            </emotionStyles.Text>
+          </div>
+        </emotionStyles.TextPhotoSection>
+
+        <emotionStyles.TextPhotoSection>
+          <emotionStyles.Text>
+            Our sisters live together! This is always a tidbit that confuses
+            everyone. They think we met through our sisters, but really they met
+            through us. We were nervous about it, but it's worked out better
+            than we expected. They even hosted the first dinner gathering
+            between the Luu's and the Murakami's (home-cooked meal included).
+          </emotionStyles.Text>
+          <Img
+            style={{ maxHeight: 300 }}
+            className="photo"
+            fluid={photo.sistersPhoto.childImageSharp.fluid}
+          />
+        </emotionStyles.TextPhotoSection>
+
+        <emotionStyles.Text>
+          Tyler has made Jenny a "punctual" person. Although showing up to a
+          movie an hour early sounds more "compulsive" than it does "punctual".
+        </emotionStyles.Text>
       </emotionStyles.Section>
     </Layout>
   )

@@ -18,8 +18,8 @@ export const Section = styled.div`
     text-align: center;
   }
 
-  .center {
-    text-align: center;
+  img {
+    border-radius: 4px;
   }
 `
 
@@ -34,16 +34,26 @@ export const Subtitle = styled.div`
 `
 
 export const Text = styled.p`
-  margin: 30px 0;
+  margin: 15px 0;
+
+  &.center {
+    text-align: center;
+  }
 `
 
 export const TextPhotoSection = styled.div`
   display: flex;
+  align-items: center;
+  margin-bottom: 40px;
 
   .photo {
     width: 50%;
     min-width: 300px;
     margin: 0 30px;
+
+    &.first {
+      margin-left: 0;
+    }
   }
 
   @media (max-width: 1023px) {
@@ -72,7 +82,7 @@ export const pageContainer = styled.div`
 
 export const Linebreak = styled.div`
   width: 60px;
-  height: 2px;
+  height: 1px;
   background: ${palette.primaryColor};
   margin: 60px auto;
 `
