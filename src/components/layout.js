@@ -63,11 +63,23 @@ const Footer = styled.footer`
   font-size: 12px;
   text-transform: uppercase;
   box-shadow: #74a3b77a 1px 1px 8px -3px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding: 20px;
   line-height: 12px;
 
   span {
     font-size: 10px;
+  }
+
+  &.schedule,
+  &.faq,
+  &.travel,
+  &.rsvp {
+    margin-left: 500px;
+
+    @media (max-width: 1023px) {
+      margin-left: 0;
+    }
   }
 `
 
@@ -86,7 +98,7 @@ const Layout = ({ children, className }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Main className={className}>{children}</Main>
-      <Footer>
+      <Footer className={className}>
         © <span>Luu</span> 2020
       </Footer>
     </>
