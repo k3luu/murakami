@@ -5,8 +5,9 @@
 }
 
 .mycarousel .gatsby-image-wrapper {
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.1);
   height: 650px;
+  border-radius: 10px;
 }
 
 .mycarousel__status {

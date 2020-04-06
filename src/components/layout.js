@@ -59,6 +59,18 @@ const Main = styled.main`
   }
 `
 
+const Footer = styled.footer`
+  font-size: 12px;
+  text-transform: uppercase;
+  box-shadow: #74a3b77a 1px 1px 8px -3px;
+  padding: 20px;
+  line-height: 12px;
+
+  span {
+    font-size: 10px;
+  }
+`
+
 const Layout = ({ children, className }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -74,6 +86,9 @@ const Layout = ({ children, className }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Main className={className}>{children}</Main>
+      <Footer>
+        © <span>Luu</span> 2020
+      </Footer>
     </>
   )
 }

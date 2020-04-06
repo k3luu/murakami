@@ -1,5 +1,5 @@
-import React from "react"
 import styled from "@emotion/styled"
+import * as palette from "./palette"
 
 export const Section = styled.div`
   padding-bottom: 50px;
@@ -8,6 +8,18 @@ export const Section = styled.div`
 
   @media (max-width: 1023px) {
     margin: 80px 20px;
+  }
+
+  &.home {
+    padding-top: 80px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  img {
+    border-radius: 4px;
   }
 `
 
@@ -22,16 +34,26 @@ export const Subtitle = styled.div`
 `
 
 export const Text = styled.p`
-  margin: 30px 0;
+  margin: 15px 0;
+
+  &.center {
+    text-align: center;
+  }
 `
 
 export const TextPhotoSection = styled.div`
   display: flex;
+  align-items: center;
+  margin-bottom: 40px;
 
   .photo {
     width: 50%;
     min-width: 300px;
     margin: 0 30px;
+
+    &.first {
+      margin-left: 0;
+    }
   }
 
   @media (max-width: 1023px) {
@@ -56,4 +78,11 @@ export const pageContainer = styled.div`
     height: unset;
     margin-left: unset;
   }
+`
+
+export const Linebreak = styled.div`
+  width: 60px;
+  height: 1px;
+  background: ${palette.primaryColor};
+  margin: 60px auto;
 `

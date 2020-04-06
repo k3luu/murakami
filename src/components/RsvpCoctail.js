@@ -70,7 +70,7 @@ const styles = () => ({
   },
 })
 
-const RsvpForm = props => {
+const RsvpCoctail = props => {
   const [firstNameVal, setFirstName] = useState(false)
   const [lastNameVal, setLastName] = useState(false)
   const [guestAdded, setGuestAdded] = useState(false)
@@ -186,4 +186,4 @@ const RsvpForm = props => {
   )
 }
 
-export default withStyles(styles)(RsvpForm)
+export default withStyles(styles)(RsvpCoctail)
