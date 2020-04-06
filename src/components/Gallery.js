@@ -4,8 +4,7 @@ import Img from "gatsby-image"
 import Masonry from "react-masonry-component"
 import styled from "@emotion/styled"
 
-const Container = styled.div`
-`;
+const Container = styled.div``
 
 const ImageItem = styled.div`
   margin-right: 10px;
@@ -24,12 +23,10 @@ const ImageItem = styled.div`
       width: 100%;
     }
   }
-  
 `
 
 const masonryOptions = {
   transitionDuration: 0,
-
 }
 
 const imagesLoadedOptions = {}
@@ -38,7 +35,10 @@ function Gallery() {
   const { allFile } = useStaticQuery(
     graphql`
       query {
-        allFile(filter: { relativeDirectory: { eq: "slides" } }) {
+        allFile(
+          filter: { relativeDirectory: { eq: "slides" } }
+          sort: { fields: [name], order: ASC }
+        ) {
           edges {
             node {
               id
