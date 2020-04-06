@@ -78,6 +78,10 @@ export const pageContainer = styled.div`
     height: unset;
     margin-left: unset;
   }
+
+  &.rsvp {
+    padding: 0;
+  }
 `
 
 export const Linebreak = styled.div`
