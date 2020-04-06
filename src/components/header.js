@@ -167,9 +167,7 @@ const Header = ({ siteTitle }) => {
         <Link to="/travel" className={handleActiveTab("/travel")}>
           Travel
         </Link>
-        <Link to="/faq" className={handleActiveTab("/faq")}>
-          FAQ
-        </Link>
+
         {/* <Link to="/wedding-party" className={handleActiveTab("/wedding-party")}>
           Wedding Party
         </Link>*/}
@@ -178,6 +176,9 @@ const Header = ({ siteTitle }) => {
         </Link>
         <Link to="/photos" className={handleActiveTab("/photos")}>
           Photos
+        </Link>
+        <Link to="/faq" className={handleActiveTab("/faq")}>
+          FAQ
         </Link>
       </Navigation>
 
@@ -219,9 +220,6 @@ const Header = ({ siteTitle }) => {
             <Link to="/travel" className={handleActiveTab("/travel")}>
               Travel
             </Link>
-            <Link to="/faq" className={handleActiveTab("/faq")}>
-              FAQ
-            </Link>
             {/* <Link
               to="/wedding-party"
               className={handleActiveTab("/wedding-party")}
@@ -233,6 +231,9 @@ const Header = ({ siteTitle }) => {
             </Link>
             <Link to="/photos" className={handleActiveTab("/photos")}>
               Photos
+            </Link>
+            <Link to="/faq" className={handleActiveTab("/faq")}>
+              FAQ
             </Link>
           </MobileNav>
         </Drawer>

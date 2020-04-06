@@ -2,6 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
+import scrollTo from "gatsby-plugin-smoothscroll"
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown"
 
 import Layout from "../components/layout"
 import Image from "../components/HeroImage"
@@ -22,20 +24,21 @@ const HeroImageContainer = styled.div`
   @media (max-width: 1024px) {
     padding: 0;
   }
-`
 
-const Names = styled.div`
-  position: absolute;
-  top: 50px;
-  left: 0;
-  right: 0;
-  font-size: 50px;
-  font-weight: 300;
-  padding: 50px 0;
-  margin: 0 auto;
+  > svg {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation: bounce 4s 2s infinite;
+    cursor: pointer;
 
-  div {
-    padding: 5px 0;
+    &:hover {
+      animation: none;
+    }
   }
 `
 
@@ -120,8 +123,9 @@ const IndexPage = () => {
           <div className="date">September 19, 2020</div>
           <div className="location">Sonoma, California</div>
         </Date>
+        <KeyboardArrowDownIcon onClick={() => scrollTo("#home-content")} />
       </HeroImageContainer>
-      <emotionStyles.Section className="home">
+      <emotionStyles.Section id="home-content" className="home">
         <emotionStyles.TextPhotoSection>
           <div>
             <h1>How We Met</h1>
