@@ -54,7 +54,10 @@ const FaqPage = () => {
         <List>
           <li>
             <div>When do I need to RSVP by?</div>
-            <p>Please RSVP by August 19, 2020.</p>
+            <p>
+              Please RSVP by November 12, 2020. We will be sending out
+              invitations a few months prior to the wedding date.
+            </p>
           </li>
           <li>
             <div>Can I bring a date?</div>

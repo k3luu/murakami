@@ -113,7 +113,7 @@ const RsvpWedding = props => {
   return (
     <>
       <Title>Wedding Ceremony & Reception</Title>
-      <Date>Saturday, September 19th</Date>
+      <Date>Saturday, December 12th</Date>
 
       <Message>
         <InfoIcon></InfoIcon>Invitations to be sent.

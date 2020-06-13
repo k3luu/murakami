@@ -14,6 +14,34 @@ export const Section = styled.div`
     padding-top: 80px;
   }
 
+  > div.notice {
+    background-color: #b1e5cd91;
+    color: #095122;
+    font-weight: 600;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 26px 6px #b1e5cd;
+    margin-bottom: 50px;
+
+    .notice__header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+
+      svg {
+        transform: rotate(-25deg);
+      }
+
+      h3 {
+        margin: 0 10px;
+      }
+    }
+
+    p {
+      letter-spacing: 0.2px;
+    }
+  }
+
   h1 {
     text-align: center;
   }

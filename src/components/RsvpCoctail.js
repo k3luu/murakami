@@ -81,7 +81,7 @@ const RsvpCoctail = props => {
   return (
     <>
       <Title>Cocktail Reception</Title>
-      <Date>Friday, September 18th</Date>
+      <Date>Friday, December 11th</Date>
 
       <Form
         name="cocktail-rsvp"

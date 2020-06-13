@@ -110,7 +110,7 @@ const SchedulePage = () => {
         <h1>Schedule</h1>
 
         <DateTitle>
-          <Date>18</Date>
+          <Date>11</Date>
           <DateSubtitle>
             <Weekday>Friday</Weekday>
           </DateSubtitle>
@@ -156,7 +156,7 @@ const SchedulePage = () => {
         </Day>
 
         <DateTitle>
-          <Date>19</Date>
+          <Date>12</Date>
           <DateSubtitle>
             <Weekday>Saturday</Weekday>
             <Note>
@@ -192,7 +192,7 @@ const SchedulePage = () => {
         </Day>
 
         <DateTitle>
-          <Date>20</Date>
+          <Date>13</Date>
           <DateSubtitle>
             <Weekday>Sunday</Weekday>
             <Note>
