@@ -15,13 +15,27 @@ export const Section = styled.div`
   }
 
   > div.notice {
-    background-color: #b1e5cd91;
-    color: #095122;
+    background-color: ${palette.white};
+    color: #3c6373;
     font-weight: 600;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0px 1px 26px 6px #b1e5cd;
+    box-shadow: 0px 1px 26px 6px #75adc170;
     margin-bottom: 50px;
+    position: relative;
+
+    &:before {
+      content: "";
+      -webkit-animation: pulsate 2s ease-out;
+      -webkit-animation-iteration-count: infinite;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 0;
+      border-radius: 10px;
+    }
 
     .notice__header {
       display: flex;
@@ -53,6 +67,29 @@ export const Section = styled.div`
 
   img {
     border-radius: 4px;
+  }
+
+  @-webkit-keyframes pulsate {
+    0% {
+      -webkit-transform: scale(0.1, 0.1);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1.2, 1.2);
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulsate {
+    0% {
+      box-shadow: 0 0 0 0px #75adc170;
+    }
+    100% {
+      box-shadow: 0 0 25px 30px rgba(0, 0, 0, 0);
+    }
   }
 
   @-webkit-keyframes bell {
