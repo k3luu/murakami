@@ -620,6 +620,12 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+.menu__item {
+  width: 20px;
+  text-align: right;
+  margin: 0 5px;
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;

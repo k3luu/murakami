@@ -34,11 +34,53 @@ const HeroImageContainer = styled.div`
     left: 0;
     right: 0;
     margin: 0 auto;
-    animation: bounce 4s 2s infinite;
+    animation: bounce 3s 1s infinite;
     cursor: pointer;
 
     &:hover {
       animation: none;
+    }
+  }
+
+  @-webkit-keyframes bounce {
+    0%,
+    10%,
+    25%,
+    40%,
+    50% {
+      -webkit-transform: translateY(0) rotate(0deg);
+      transform: translateY(0) rotate(0deg);
+    }
+
+    20% {
+      -webkit-transform: translateY(-20px) rotate(0deg);
+      transform: translateY(-20px) rotate(0deg);
+    }
+
+    30% {
+      -webkit-transform: translateY(-5px) rotate(0deg);
+      transform: translateY(-5px) rotate(0deg);
+    }
+  }
+
+  @keyframes bounce {
+    0%,
+    10%,
+    25%,
+    40%,
+    50% {
+      -webkit-transform: translateY(0) rotate(0deg);
+      transform: translateY(0) rotate(0deg);
+    }
+
+    20% {
+      -webkit-transform: translateY(-20px) rotate(0deg);
+      transform: translateY(-20px) rotate(0deg);
+    }
+
+    30% {
+      -webkit-transform: translateY(-5px) rotate(0deg);
+      transform: translateY(-5px) rotate(0deg);
     }
   }
 `

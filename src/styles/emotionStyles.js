@@ -11,7 +11,7 @@ export const Section = styled.div`
   }
 
   &.home {
-    padding-top: 80px;
+    padding-top: 120px;
   }
 
   > div.notice {
@@ -30,6 +30,11 @@ export const Section = styled.div`
 
       svg {
         transform: rotate(-25deg);
+        animation: bell 4s 2s infinite;
+
+        &:hover {
+          animation: none;
+        }
       }
 
       h3 {
@@ -48,6 +53,48 @@ export const Section = styled.div`
 
   img {
     border-radius: 4px;
+  }
+
+  @-webkit-keyframes bell {
+    0%,
+    10%,
+    25%,
+    40%,
+    50% {
+      -webkit-transform: translateY(0) rotate(-25deg);
+      transform: translateY(0) rotate(-25deg);
+    }
+
+    20% {
+      -webkit-transform: translateY(-20px) rotate(-25deg);
+      transform: translateY(-20px) rotate(-25deg);
+    }
+
+    30% {
+      -webkit-transform: translateY(-5px) rotate(-25deg);
+      transform: translateY(-5px) rotate(-25deg);
+    }
+  }
+
+  @keyframes bell {
+    0%,
+    10%,
+    25%,
+    40%,
+    50% {
+      -webkit-transform: translateY(0) rotate(-25deg);
+      transform: translateY(0) rotate(-25deg);
+    }
+
+    20% {
+      -webkit-transform: translateY(-20px) rotate(-25deg);
+      transform: translateY(-20px) rotate(-25deg);
+    }
+
+    30% {
+      -webkit-transform: translateY(-5px) rotate(-25deg);
+      transform: translateY(-5px) rotate(-25deg);
+    }
   }
 `
 

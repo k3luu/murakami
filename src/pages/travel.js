@@ -414,17 +414,19 @@ const TravelPage = () => {
           onClose={handleClose}
         >
           <MenuItem onClick={() => scrollTo("#air-travel")}>
-            I. Air Travel
+            <span className="menu__item">I.</span> Air Travel
           </MenuItem>
           <MenuItem onClick={() => scrollTo("#transport")}>
-            II. Transport
+            <span className="menu__item">II.</span> Transport
           </MenuItem>
           <MenuItem onClick={() => scrollTo("#hotels")}>
-            III. Hotels/Lodging
+            <span className="menu__item">III.</span> Hotels/Lodging
           </MenuItem>
-          <MenuItem onClick={() => scrollTo("#venue")}>IV. Venue</MenuItem>
+          <MenuItem onClick={() => scrollTo("#venue")}>
+            <span className="menu__item">IV.</span> Venue
+          </MenuItem>
           <MenuItem onClick={() => scrollTo("#recs")}>
-            V. Recommendations
+            <span className="menu__item">V.</span> Recommendations
           </MenuItem>
         </Menu>
       </emotionStyles.pageContainer>
