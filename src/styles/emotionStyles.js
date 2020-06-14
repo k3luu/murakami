@@ -26,7 +26,7 @@ export const Section = styled.div`
 
     &:before {
       content: "";
-      -webkit-animation: pulsate 2s ease-out;
+      -webkit-animation: pulsate 3s 2s ease-out;
       -webkit-animation-iteration-count: infinite;
       position: absolute;
       top: 0;
@@ -44,7 +44,7 @@ export const Section = styled.div`
 
       svg {
         transform: rotate(-25deg);
-        animation: bell 4s 2s infinite;
+        animation: bell 3s 2s infinite;
 
         &:hover {
           animation: none;
