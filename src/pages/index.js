@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import styled from "@emotion/styled"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown"
+import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive"
 
 import Layout from "../components/layout"
 import Image from "../components/HeroImage"
@@ -33,11 +34,53 @@ const HeroImageContainer = styled.div`
     left: 0;
     right: 0;
     margin: 0 auto;
-    animation: bounce 4s 2s infinite;
+    animation: bounce 3s 1s infinite;
     cursor: pointer;
 
     &:hover {
       animation: none;
+    }
+  }
+
+  @-webkit-keyframes bounce {
+    0%,
+    10%,
+    25%,
+    40%,
+    50% {
+      -webkit-transform: translateY(0) rotate(0deg);
+      transform: translateY(0) rotate(0deg);
+    }
+
+    20% {
+      -webkit-transform: translateY(-20px) rotate(0deg);
+      transform: translateY(-20px) rotate(0deg);
+    }
+
+    30% {
+      -webkit-transform: translateY(-5px) rotate(0deg);
+      transform: translateY(-5px) rotate(0deg);
+    }
+  }
+
+  @keyframes bounce {
+    0%,
+    10%,
+    25%,
+    40%,
+    50% {
+      -webkit-transform: translateY(0) rotate(0deg);
+      transform: translateY(0) rotate(0deg);
+    }
+
+    20% {
+      -webkit-transform: translateY(-20px) rotate(0deg);
+      transform: translateY(-20px) rotate(0deg);
+    }
+
+    30% {
+      -webkit-transform: translateY(-5px) rotate(0deg);
+      transform: translateY(-5px) rotate(0deg);
     }
   }
 `
@@ -120,12 +163,62 @@ const IndexPage = () => {
       <HeroImageContainer>
         <Image />
         <Date>
-          <div className="date">September 19, 2020</div>
+          <div className="date">December 12, 2020</div>
           <div className="location">Sonoma, California</div>
         </Date>
         <KeyboardArrowDownIcon onClick={() => scrollTo("#home-content")} />
       </HeroImageContainer>
       <emotionStyles.Section id="home-content" className="home">
+        <div className="notice">
+          <div>
+            <div className="notice__header">
+              <NotificationsActiveIcon />
+              <h3>Announcement</h3>
+            </div>
+
+            <emotionStyles.Text>
+              We have decided to postpone our wedding to{" "}
+              <strong>December 12, 2020</strong>.
+            </emotionStyles.Text>
+            <emotionStyles.Text>
+              While Sonoma is showing positive signs as it reopens, there is
+              just too much uncertainty at this point about hosting a large
+              event. We want our guests not only to feel safe and comfortable
+              but for everyone to have a great time without any worries.
+            </emotionStyles.Text>
+            <emotionStyles.Text>
+              If you have booked accommodations or travel, most companies are
+              being extremely flexible but please let us know if you run into
+              any problems. The Travel page has been updated with new hotel
+              blocks. Reservations made under the old blocks have been
+              automatically transferred.
+            </emotionStyles.Text>
+            <emotionStyles.Text>
+              We also acknowledge that things may change in a few months with a
+              potential resurgence of COVID cases, but we're hopeful that we'll
+              be able to end the year with some good news and the chance to see
+              all of our friends and family!
+            </emotionStyles.Text>
+            <emotionStyles.Text>
+              If you feel uncomfortable attending or if you have been
+              potentially exposed to COVID, we ask that you please do not attend
+              for your safety and the safety of other guests. We promise to
+              celebrate with you personally once things settle down.
+            </emotionStyles.Text>
+            <emotionStyles.Text>
+              We will be sending out formal invitations in a few months once we
+              know more.
+            </emotionStyles.Text>
+            <emotionStyles.Text>
+              Stay safe,
+              <br />
+              Tyler & Jenny
+            </emotionStyles.Text>
+          </div>
+        </div>
+      </emotionStyles.Section>
+
+      <emotionStyles.Section>
         <emotionStyles.TextPhotoSection>
           <div>
             <h1>How We Met</h1>

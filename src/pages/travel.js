@@ -205,7 +205,7 @@ const TravelPage = () => {
               <div>Sheraton Sonoma Wine Country</div>
               <p>
                 We have a block of rooms set aside for guests to book at a
-                discounted rate of $279 per night with a two-night minimum. You
+                discounted rate of $229 per night with a two-night minimum. You
                 can book using the link below or by calling 1 (888) 627-8458.
                 Let them know you're booking with the Luu & Murakami Wedding
                 Block. The group rate can also be extended based upon hotel
@@ -225,7 +225,7 @@ const TravelPage = () => {
               <div>Courtyard Novato Marin/Sonoma</div>
               <p>
                 We have a block of rooms set aside for guests to book at a
-                discounted rate of $189 per night with a two-night minimum. You
+                discounted rate of $139 per night with a two-night minimum. You
                 can book using the link below or by calling 1(800) 321-2211 or
                 (415) 883-8950. Let them know you're booking with the Jenny Luu
                 group. The hotel is about 20-30 min drive to the wedding venue.
@@ -414,17 +414,19 @@ const TravelPage = () => {
           onClose={handleClose}
         >
           <MenuItem onClick={() => scrollTo("#air-travel")}>
-            I. Air Travel
+            <span className="menu__item">I.</span> Air Travel
           </MenuItem>
           <MenuItem onClick={() => scrollTo("#transport")}>
-            II. Transport
+            <span className="menu__item">II.</span> Transport
           </MenuItem>
           <MenuItem onClick={() => scrollTo("#hotels")}>
-            III. Hotels/Lodging
+            <span className="menu__item">III.</span> Hotels/Lodging
           </MenuItem>
-          <MenuItem onClick={() => scrollTo("#venue")}>IV. Venue</MenuItem>
+          <MenuItem onClick={() => scrollTo("#venue")}>
+            <span className="menu__item">IV.</span> Venue
+          </MenuItem>
           <MenuItem onClick={() => scrollTo("#recs")}>
-            V. Recommendations
+            <span className="menu__item">V.</span> Recommendations
           </MenuItem>
         </Menu>
       </emotionStyles.pageContainer>
