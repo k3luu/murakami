@@ -164,7 +164,6 @@ const IndexPage = () => {
         <Image />
         <Date>
           <div className="date">December 12, 2020</div>
-          <div className="location">Sonoma, California</div>
         </Date>
         <KeyboardArrowDownIcon onClick={() => scrollTo("#home-content")} />
       </HeroImageContainer>

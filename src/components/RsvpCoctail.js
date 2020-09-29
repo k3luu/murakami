@@ -88,6 +88,7 @@ const RsvpCoctail = props => {
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
+        aria-label="RSVP form"
       >
         <input
           type="hidden"
@@ -97,7 +98,8 @@ const RsvpCoctail = props => {
         />
 
         <label style={{ visibility: "hidden" }} aria-label="hidden field">
-          Don’t fill this out if you're human: <input name="bot-field" />
+          Don’t fill this out if you're human:{" "}
+          <input name="bot-field" aria-label="bot field" />
         </label>
 
         <FormSection>

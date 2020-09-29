@@ -168,6 +168,7 @@ const Header = ({ siteTitle }) => {
           setScrollTop(false)
         }
       }}
+      onFocus={() => void 0}
     >
       <SiteName>
         <Link to="/">{siteTitle}</Link>
