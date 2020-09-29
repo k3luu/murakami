@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
@@ -56,6 +56,7 @@ const Navigation = styled.nav`
   font-weight: bold;
   text-align: center;
   padding: 15px;
+  transition: 0.3s ease;
 
   @media (max-width: 1023px) {
     display: none;
@@ -127,16 +128,23 @@ const MobileNavTitle = styled.div`
 
 const Header = ({ siteTitle }) => {
   const [drawerOpen, setDrawer] = useState(false)
+  const [scrollTop, setScrollTop] = useState(true)
   const classes = useStyles()
 
   const isClient = typeof window === "object"
 
-  function getSize() {
-    return {
-      width: isClient ? window.innerWidth : undefined,
-      height: isClient ? window.innerHeight : undefined,
+  useEffect(() => {
+    function handleScroll() {
+      const scrollTop = window.scrollY < 100
+      setScrollTop(scrollTop)
     }
-  }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   function handleActiveTab(path) {
     const pathName = isClient ? window.location.pathname : ""
@@ -153,11 +161,29 @@ const Header = ({ siteTitle }) => {
   }
 
   return (
-    <HeaderContainer>
+    <HeaderContainer
+      onMouseOver={() => setScrollTop(true)}
+      onMouseLeave={() => {
+        if (window.scrollY > 100) {
+          setScrollTop(false)
+        }
+      }}
+    >
       <SiteName>
         <Link to="/">{siteTitle}</Link>
       </SiteName>
-      <Navigation>
+      <Navigation
+        style={
+          scrollTop
+            ? { background: "transparent", opacity: 1, padding: 15 }
+            : {
+                background: "#fff",
+                opacity: 0,
+                padding: 0,
+                height: 0,
+              }
+        }
+      >
         <Link to="/" className={handleActiveTab("/")}>
           Home
         </Link>
@@ -166,6 +192,9 @@ const Header = ({ siteTitle }) => {
         </Link>
         <Link to="/travel" className={handleActiveTab("/travel")}>
           Travel
+        </Link>
+        <Link to="/registry" className={handleActiveTab("/registry")}>
+          Registry
         </Link>
 
         {/* <Link to="/wedding-party" className={handleActiveTab("/wedding-party")}>
@@ -219,6 +248,9 @@ const Header = ({ siteTitle }) => {
             </Link>
             <Link to="/travel" className={handleActiveTab("/travel")}>
               Travel
+            </Link>
+            <Link to="/registry" className={handleActiveTab("/registry")}>
+              Registry
             </Link>
             {/* <Link
               to="/wedding-party"

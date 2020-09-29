@@ -173,44 +173,18 @@ const IndexPage = () => {
           <div>
             <div className="notice__header">
               <NotificationsActiveIcon />
-              <h3>Announcement</h3>
+              <h3>Announcement: September 28, 2020</h3>
             </div>
 
+            <emotionStyles.Text>Family and friends,</emotionStyles.Text>
             <emotionStyles.Text>
-              We have decided to postpone our wedding to{" "}
-              <strong>December 12, 2020</strong>.
+              We are sorry to share that we are canceling our large wedding
+              reception and instead having a small, intimate celebration with a
+              limited number of guests. We're sad that we can't have everyone we
+              love there, but we hope you understand given the circumstances.
             </emotionStyles.Text>
             <emotionStyles.Text>
-              While Sonoma is showing positive signs as it reopens, there is
-              just too much uncertainty at this point about hosting a large
-              event. We want our guests not only to feel safe and comfortable
-              but for everyone to have a great time without any worries.
-            </emotionStyles.Text>
-            <emotionStyles.Text>
-              If you have booked accommodations or travel, most companies are
-              being extremely flexible but please let us know if you run into
-              any problems. The Travel page has been updated with new hotel
-              blocks. Reservations made under the old blocks have been
-              automatically transferred.
-            </emotionStyles.Text>
-            <emotionStyles.Text>
-              We also acknowledge that things may change in a few months with a
-              potential resurgence of COVID cases, but we're hopeful that we'll
-              be able to end the year with some good news and the chance to see
-              all of our friends and family!
-            </emotionStyles.Text>
-            <emotionStyles.Text>
-              If you feel uncomfortable attending or if you have been
-              potentially exposed to COVID, we ask that you please do not attend
-              for your safety and the safety of other guests. We promise to
-              celebrate with you personally once things settle down.
-            </emotionStyles.Text>
-            <emotionStyles.Text>
-              We will be sending out formal invitations in a few months once we
-              know more.
-            </emotionStyles.Text>
-            <emotionStyles.Text>
-              Stay safe,
+              All our love,
               <br />
               Tyler & Jenny
             </emotionStyles.Text>

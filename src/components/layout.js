@@ -16,22 +16,11 @@ import Header from "./header"
 import "./layout.css"
 
 const Main = styled.main`
-  &.our-story,
-  &.photos {
-    max-width: 950px;
-    margin: 150px auto;
+  min-height: calc(100vh - 94px);
 
-    @media (max-width: 1023px) {
-      margin: 80px 20px;
-    }
-  }
-
-  &.schedule,
-  &.faq,
-  &.travel,
-  &.rsvp {
+  &.secondary__page {
     display: flex;
-    margin-top: 90px;
+    margin-top: 40px;
 
     @media (max-width: 1023px) {
       display: block;
@@ -43,8 +32,8 @@ const Main = styled.main`
       width: 40%;
       min-width: 500px;
       max-width: 500px;
-      height: calc(100vh - 90px);
-      min-height: calc(100vh - 90px);
+      height: calc(100vh - 40px);
+      min-height: calc(100vh - 40px);
 
       @media (max-width: 1023px) {
         position: relative !important;
@@ -55,6 +44,15 @@ const Main = styled.main`
         height: 100%;
         min-height: unset;
       }
+    }
+  }
+
+  &.tertiary__page {
+    max-width: 950px;
+    margin: 110px auto;
+
+    @media (max-width: 1023px) {
+      margin: 80px 20px;
     }
   }
 `
@@ -71,10 +69,7 @@ const Footer = styled.footer`
     font-size: 10px;
   }
 
-  &.schedule,
-  &.faq,
-  &.travel,
-  &.rsvp {
+  &.secondary__page {
     margin-left: 500px;
 
     @media (max-width: 1023px) {
@@ -83,7 +78,7 @@ const Footer = styled.footer`
   }
 `
 
-const Layout = ({ children, className }) => {
+const Layout = ({ children, className, id }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -97,7 +92,9 @@ const Layout = ({ children, className }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Main className={className}>{children}</Main>
+      <Main id={id} className={className}>
+        {children}
+      </Main>
       <Footer className={className}>
         © <span>Luu</span> 2020
       </Footer>

@@ -181,18 +181,18 @@ export const TextPhotoSection = styled.div`
 
 export const pageContainer = styled.div`
   overflow: auto;
-  padding: 20px;
+  padding: 50px 20px 20px 20px;
   flex-grow: 1;
   margin-left: 500px;
+
+  h1 {
+    margin-top: 30px;
+  }
 
   @media (max-width: 1023px) {
     max-height: unset;
     height: unset;
     margin-left: unset;
-  }
-
-  &.rsvp {
-    padding: 0;
   }
 `
 

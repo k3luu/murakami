@@ -89,9 +89,14 @@ const RsvpCoctail = props => {
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
-        <input type="hidden" name="form-name" value="cocktail-rsvp" />
+        <input
+          type="hidden"
+          name="form-name"
+          value="cocktail-rsvp"
+          aria-label="hidden form"
+        />
 
-        <label style={{ visibility: "hidden" }}>
+        <label style={{ visibility: "hidden" }} aria-label="hidden field">
           Don’t fill this out if you're human: <input name="bot-field" />
         </label>
 
@@ -102,6 +107,7 @@ const RsvpCoctail = props => {
             name="First Name"
             placeholder="First Name"
             onChange={handleFirstNameChange}
+            aria-label="First Name"
           />
           <TextInput
             label="Last Name"
@@ -109,18 +115,20 @@ const RsvpCoctail = props => {
             name="first_name"
             placeholder="Last Name"
             onChange={handleLastNameChange}
+            aria-label="Last Name"
           />
         </FormSection>
 
         <FormSection>
           <TextInput
-            label="Number of Guests Attending"
+            label="Number of guests attending"
             type="number"
             id="guests"
             name="guests"
             min="1"
             max="9"
             onChange={handleGuestChange}
+            aria-label="Number of guests attending"
           />
         </FormSection>
 
