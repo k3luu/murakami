@@ -52,7 +52,7 @@ const ProposalPage = () => {
   `)
 
   return (
-    <Layout className="our-story">
+    <Layout className="tertiary__page">
       <SEO title="The Proposal" />
       <emotionStyles.Section>
         <h1>How We Met</h1>

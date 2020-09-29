@@ -1,10 +1,9 @@
 import React, { Component } from "react"
 import SwipeableViews from "react-swipeable-views"
-import { autoPlay, bindKeyboard } from "react-swipeable-views-utils"
+import { bindKeyboard } from "react-swipeable-views-utils"
 import IconButton from "@material-ui/core/IconButton"
 import { ChevronLeft, ChevronRight } from "@material-ui/icons"
 import Img from "gatsby-image"
-import styled from "@emotion/styled"
 
 import CarouselStepper from "./CarouselStepper"
 import "./MyCarousel.css"
@@ -106,7 +105,7 @@ class MyCarousel extends Component {
   }
 
   render() {
-    const { data, showStatus, showArrows, showThumbnails } = this.props
+    const { data, showStatus } = this.props
     const { currIndex } = this.state
 
     return (

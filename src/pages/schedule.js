@@ -100,7 +100,7 @@ const SchedulePage = () => {
   `)
 
   return (
-    <Layout className="schedule">
+    <Layout className="secondary__page">
       <SEO title="Schedule" />
       <Img
         className="page__image"
@@ -129,6 +129,7 @@ const SchedulePage = () => {
               <a
                 href="http://maps.google.com/maps?q=421 1st St W, Sonoma, CA 95476"
                 target="_blank"
+                rel="noreferrer noopener"
               >
                 421 1st St W, Sonoma, CA 95476
               </a>
@@ -142,6 +143,7 @@ const SchedulePage = () => {
               <a
                 href="http://maps.google.com/maps?q=421 1st St W, Sonoma, CA 95476"
                 target="_blank"
+                rel="noreferrer noopener"
               >
                 421 1st St W, Sonoma, CA 95476
               </a>
@@ -165,6 +167,7 @@ const SchedulePage = () => {
               <a
                 href="http://maps.google.com/maps?q=25200 Arnold Dr, Sonoma, CA 95476"
                 target="_blank"
+                rel="noreferrer noopener"
               >
                 25200 Arnold Dr, Sonoma, CA 95476
               </a>

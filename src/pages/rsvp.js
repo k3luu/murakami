@@ -42,7 +42,7 @@ const RsvpPage = () => {
   }
 
   return (
-    <Layout className="rsvp">
+    <Layout className="secondary__page">
       <SEO title="RSVP" />
       <Img
         className="page__image"

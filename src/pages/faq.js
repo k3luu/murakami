@@ -12,12 +12,12 @@ const List = styled.ul`
   list-style: none;
   margin-left: 0;
 
-  li {
+  > li {
     border-bottom: 1px solid ${palette.mystic};
     padding: 30px 0;
   }
 
-  li > div:first-child {
+  > li > div:first-child {
     color: ${palette.primaryColor};
     font-size: 18px;
     font-weight: bold;
@@ -25,6 +25,13 @@ const List = styled.ul`
   }
 
   li > p {
+  }
+`
+
+const SubList = styled.ul`
+  li {
+    border-bottom: 0;
+    padding: 10px;
   }
 `
 
@@ -42,7 +49,7 @@ const FaqPage = () => {
   `)
 
   return (
-    <Layout className="faq">
+    <Layout className="secondary__page">
       <SEO title="Frequently Asked Questions" />
       <Img
         className="page__image"
@@ -185,7 +192,26 @@ const FaqPage = () => {
           </li>
           <li>
             <div>Where are we registered?</div>
-            <p>Please check back.</p>
+            <SubList>
+              <li>
+                <a
+                  href="https://www.zola.com/registry/tylerandjenny1212"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Zola Registry
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.crateandbarrel.com/gift-registry/jenny-luu-and-tyler-murakami/r6061972"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Crate & Barrel
+                </a>
+              </li>
+            </SubList>
           </li>
           <li>
             <div>Who built this beautiful website?</div>

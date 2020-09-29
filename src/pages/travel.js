@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import scrollTo from "gatsby-plugin-smoothscroll"
+import Button from "@material-ui/core/Button"
 import Fab from "@material-ui/core/Fab"
 import Menu from "@material-ui/core/Menu"
 import MenuItem from "@material-ui/core/MenuItem"
@@ -70,7 +71,6 @@ const TravelPage = () => {
   })
 
   const listener = () => {
-    console.log("scrolling", coordinates)
     const newScrollY = isBrowser ? -window.scrollY : 0
     setCoordinates(prev => ({
       x: isBrowser ? window.scrollX : 0,
@@ -105,7 +105,7 @@ const TravelPage = () => {
   `)
 
   return (
-    <Layout className="travel">
+    <Layout className="secondary__page">
       <SEO title="Travel" />
       <Img
         className="page__image"
@@ -117,19 +117,19 @@ const TravelPage = () => {
 
         <TravelNav>
           <li>
-            <a onClick={() => scrollTo("#air-travel")}>Air Travel</a>
+            <Button onClick={() => scrollTo("#air-travel")}>Air Travel</Button>
           </li>
           <li>
-            <a onClick={() => scrollTo("#transport")}>Transport</a>
+            <Button onClick={() => scrollTo("#transport")}>Transport</Button>
           </li>
           <li>
-            <a onClick={() => scrollTo("#hotels")}>Hotels/Lodging</a>
+            <Button onClick={() => scrollTo("#hotels")}>Hotels/Lodging</Button>
           </li>
           <li>
-            <a onClick={() => scrollTo("#venue")}>Venue</a>
+            <Button onClick={() => scrollTo("#venue")}>Venue</Button>
           </li>
           <li>
-            <a onClick={() => scrollTo("#recs")}>Recommendations</a>
+            <Button onClick={() => scrollTo("#recs")}>Recommendations</Button>
           </li>
         </TravelNav>
 
@@ -179,6 +179,7 @@ const TravelPage = () => {
             <a
               href="https://www.avis.com/content/dam/avis/na/us/common/bridge/meetings/weddings.html?AWD=E779930&amp;NAME=Luu-Murakami+Wedding&amp;FDATE=09182020&amp;TDATE=09202020&amp;LOCATION2=&amp;LOCATION1=San+Francisco,+CA&amp;ARCIATA=&amp;EVENT=0&amp;AA=0"
               target="_blank"
+              rel="noreferrer noopener"
             >
               Avis Rental Car link
             </a>{" "}
@@ -216,6 +217,7 @@ const TravelPage = () => {
                 <a
                   href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1576001826620&key=GRP&app=resvlink"
                   target="_blank"
+                  rel="noreferrer noopener"
                 >
                   https://www.marriott.com/event-reservations/reservation-link.mi?id=1576001826620&key=GRP&app=resvlink
                 </a>
@@ -234,6 +236,7 @@ const TravelPage = () => {
                 <a
                   href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1576607783144&key=GRP&app=resvlink"
                   target="_blank"
+                  rel="noreferrer noopener"
                 >
                   https://www.marriott.com/event-reservations/reservation-link.mi?id=1576607783144&key=GRP&app=resvlink
                 </a>
@@ -266,6 +269,7 @@ const TravelPage = () => {
               <a
                 href="http://maps.google.com/maps?q=25200 Arnold Dr, Sonoma, CA 95476"
                 target="_blank"
+                rel="noreferrer noopener"
               >
                 25200 Arnold Dr, Sonoma, CA 95476
               </a>
